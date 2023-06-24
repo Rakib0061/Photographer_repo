@@ -1,0 +1,70 @@
+@import "./variable";
+
+.about_section {
+  margin-top: 90px;
+
+  .about_title {
+    position: relative;
+    margin-bottom: 60px;
+
+    h1 {
+      text-align: center;
+      font-family: $title_family;
+      font-size: $title_font;
+      font-weight: $title_weight;
+    }
+    .star {
+      position: absolute;
+      width: 20px;
+      right: -5%;
+      top: 100%;
+    }
+  }
+
+  .about_left {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+
+    .about_left_item {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      h4 {
+        color: $prime_color;
+        font-size: $h_font;
+        font-weight: $p_weight;
+      }
+
+      p {
+        font-size: $p_font_sm;
+        font-weight: $title_weight;
+      }
+    }
+  }
+
+  .about_center {
+    position: relative;
+    @include border($divider:dashed,$radious:160px);
+    padding: 10px;
+    width: 285px;
+    height: 410px;
+    transform-origin: center center;
+    // animation: border_rotate infinite 3s linear;
+
+    @keyframes border_rotate {
+      0%{
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    img {
+      width: 260px;
+    }
+  }
+}

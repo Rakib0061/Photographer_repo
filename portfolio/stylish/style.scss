@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1;100;200;300;400;500;600;700;800;900&display=swap");
+@import "./variable";
+@import "./header";
+@import "./gallery";
+@import "./about";
+@import "./exclusive_shot";
+@import "./footer";
+@import "./slider";
+
+body {
+  font-family: $prime_family !important;
+  background-color: $body_bg !important;
+
+  // @@@@@@@@@@@@@@@  scroll bar  @@@@@@@@@@@@@@@
+  
+  &::-webkit-scrollbar {
+    background-color: $body_bg;
+    width: 10px;
+
+    &:hover {
+      box-shadow:  inset 0px 0px 5px #00000040;
+    }
+
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $prime_color;
+    @include border($clr:$body_bg, $wd: 2px, $radious: 16px);
+  }
+}

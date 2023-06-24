@@ -1,0 +1,47 @@
+// @@@@@@@@@@@@@@@@@@@@@@@@ color @@@@@@@@@@@@@@@@@@@@@@@@
+
+$prime_color: #cf4e4e;
+$mild_color: #afcfff;
+$secendory_color: #9ee96d;
+$body_bg: #fefaeb;
+$dark_blk: #222222;
+$light_blk: #666666;
+$border: #dedede;
+$sticky_navbar_bg: #fefaeb99;
+$sticky_navbar_sadow: #c1c1c163;
+
+// @@@@@@@@@@@@@@@@@@@@@@@@ color @@@@@@@@@@@@@@@@@@@@@@@@
+
+// @@@@@@@@@@@@@@@@@@@@@@@@ font @@@@@@@@@@@@@@@@@@@@@@@@
+
+$title_family: "simplifydemo";
+$prime_family: "Hepta Slab";
+$banner_font: 75px;
+$banner_weight: 400;
+$nav_font: 16px;
+$nav_weight: 500;
+$cv_btn_font: 10px;
+$cv_btn_icon__font: 42px;
+$p_font: 15px;
+$p_font_sm: 13px;
+$h_font: 23px;
+$h_font_sm: 18px;
+$stripe_font: 18px;
+$p_weight: 600;
+$title_font: 48px;
+$title_weight: 500;
+
+// @@@@@@@@@@@@@@@@@@@@@@@@ font @@@@@@@@@@@@@@@@@@@@@@@@
+
+// @@@@@@@@@@@@@@@@@@@@@@@@ mixin @@@@@@@@@@@@@@@@@@@@@@@@
+
+@mixin border($wd: 2px,$divider:solid, $clr: $border, $radious: 100%) {
+  border: $wd $divider $clr;
+  border-radius: $radious;
+}
+
+@mixin box_shadow($sdo) {
+  box-shadow: 0px 0px 7px 1px $sdo;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@ mixin @@@@@@@@@@@@@@@@@@@@@@@@

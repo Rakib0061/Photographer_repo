@@ -1,0 +1,131 @@
+@import "./variable";
+
+.gallery_section {
+  
+  .gallery_title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+
+    .star { 
+    // & + img {
+      position: absolute;
+      width: 20px;
+      left: -5%;
+      top: 100%;
+    }
+
+    h1 {
+      font-family: $title_family;
+      font-size: $title_font;
+      font-weight: $title_weight;
+      line-height: 1;
+      width: 500px;
+    }
+    button {
+      background-color: transparent;
+      color: $secendory_color;
+      @include border(0px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        margin: 0 15px 0 0;
+        font-size: $p_font;
+        font-weight: $p_weight;
+      }
+
+      img {
+        width: 90px;
+      }
+    }
+  }
+
+  .gallery_left {
+    ul {
+      display: flex;
+      justify-content: start;
+      flex-direction: column;
+      padding: 0;
+
+      li {
+        display: flex;
+        list-style: none;
+        // justify-content: space-between;
+        margin: 0 0 30px;
+        align-items: center;
+        position: relative;
+
+        p {
+          font-size: $p_font;
+          font-weight: $p_weight;
+          margin: 0;
+          width: 210px;
+        }
+
+        img {
+          width: 0px;
+          margin: 0 7px 0 0;
+        }
+
+        &:hover {
+          color: $prime_color;
+        }
+
+        &:hover::before {
+          opacity: 1;
+        }
+
+        &:hover img {
+          width: 130px;
+          color: #000;
+        }
+
+        &::before {
+          position: absolute;
+          content: "";
+          right: 10px;
+          opacity: 0;
+          width: 30px;
+          height: 30px;
+          @include border(0px);
+          background-color: $mild_color;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  .gallery_right {
+
+    .gallery_img {
+      display: flex;
+      justify-content: end;
+
+      .img_content {
+        text-align: end;
+
+        p {
+          font-size: $cv_btn_font;
+          font-weight: $p_weight;
+
+          &:nth-child(even) {
+            margin: 16px 0 0;
+          }
+        }
+
+        img {
+          width: 80%;
+          filter: sepia(100%) saturate(400%) brightness(110%) hue-rotate(350deg);
+        }
+
+        &:nth-child(even) {
+          margin-top: 70px;
+        }
+      }
+    }
+  }
+}
