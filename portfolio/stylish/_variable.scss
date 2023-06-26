@@ -44,4 +44,30 @@ $title_weight: 500;
   box-shadow: 0px 0px 7px 1px $sdo;
 }
 
+@mixin title($align:center){
+  text-align: $align;
+  font-family: $title_family;
+  font-size: $title_font;
+  font-weight: $title_weight;
+  line-height: 1;
+}
+
+@mixin star_effect($lft:inherit,$top:inherit,$rit:inherit,$btom:inherit){
+  position: absolute;
+  width: 20px;
+  left: $lft;
+  top: $top;
+  right: $rit;
+  bottom: $btom;
+  animation: star infinite alternate 1000ms ease;
+
+  @keyframes star {
+    0%{
+      transform: rotate(0deg) scale(0);
+    }
+    100%{
+      transform: rotate(100deg) scale(0.7);
+    }
+  }
+}
 // @@@@@@@@@@@@@@@@@@@@@@@@ mixin @@@@@@@@@@@@@@@@@@@@@@@@

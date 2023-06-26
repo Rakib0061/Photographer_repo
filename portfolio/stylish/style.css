@@ -132,8 +132,19 @@ header figure main .hero_left {
 header figure main .hero_left .star {
   position: absolute;
   width: 20px;
-  left: 0%;
+  left: 0;
   top: 12%;
+  right: inherit;
+  bottom: inherit;
+  animation: star infinite alternate 1000ms ease;
+}
+@keyframes star {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  100% {
+    transform: rotate(100deg) scale(0.7);
+  }
 }
 header figure main .hero_left .hero_left_title {
   position: relative;
@@ -209,8 +220,19 @@ header figure main .hero_right p {
 header figure main .hero_right .star {
   position: absolute;
   width: 20px;
-  right: -10%;
+  left: inherit;
   top: 100%;
+  right: -10%;
+  bottom: inherit;
+  animation: star infinite alternate 1000ms ease;
+}
+@keyframes star {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  100% {
+    transform: rotate(100deg) scale(0.7);
+  }
 }
 header figure main .hero_right .hero_right_title {
   position: relative;
@@ -325,7 +347,10 @@ header .strp .strp_up {
   width: 108%;
   transform: translateX(-50%) rotateZ(5deg);
 }
-header .strp .strp_up ul {
+header .strp .strp_up a {
+  text-decoration: none;
+}
+header .strp .strp_up a ul {
   display: flex;
   flex-direction: row;
   padding: 8px 0;
@@ -333,7 +358,7 @@ header .strp .strp_up ul {
   justify-content: space-around;
   align-items: center;
 }
-header .strp .strp_up ul li {
+header .strp .strp_up a ul li {
   list-style: none;
   padding: 0 25px;
   font-style: normal;
@@ -359,8 +384,20 @@ header .strp .strp_down {
   width: 20px;
   left: -5%;
   top: 100%;
+  right: inherit;
+  bottom: inherit;
+  animation: star infinite alternate 1000ms ease;
+}
+@keyframes star {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  100% {
+    transform: rotate(100deg) scale(0.7);
+  }
 }
 .gallery_section .gallery_title h1 {
+  text-align: start;
   font-family: "simplifydemo";
   font-size: 48px;
   font-weight: 500;
@@ -391,33 +428,38 @@ header .strp .strp_down {
   padding: 0;
 }
 .gallery_section .gallery_left ul li {
+  list-style: none;
+}
+.gallery_section .gallery_left ul li a {
+  color: #222222;
   display: flex;
   list-style: none;
   margin: 0 0 30px;
   align-items: center;
   position: relative;
+  text-decoration: none;
 }
-.gallery_section .gallery_left ul li p {
+.gallery_section .gallery_left ul li a p {
   font-size: 15px;
   font-weight: 600;
   margin: 0;
   width: 210px;
 }
-.gallery_section .gallery_left ul li img {
+.gallery_section .gallery_left ul li a img {
   width: 0px;
   margin: 0 7px 0 0;
 }
-.gallery_section .gallery_left ul li:hover {
+.gallery_section .gallery_left ul li a:hover {
   color: #cf4e4e;
 }
-.gallery_section .gallery_left ul li:hover::before {
+.gallery_section .gallery_left ul li a:hover::before {
   opacity: 1;
 }
-.gallery_section .gallery_left ul li:hover img {
+.gallery_section .gallery_left ul li a:hover img {
   width: 130px;
   color: #000;
 }
-.gallery_section .gallery_left ul li::before {
+.gallery_section .gallery_left ul li a::before {
   position: absolute;
   content: "";
   right: 10px;
@@ -463,12 +505,24 @@ header .strp .strp_down {
   font-family: "simplifydemo";
   font-size: 48px;
   font-weight: 500;
+  line-height: 1;
 }
 .about_section .about_title .star {
   position: absolute;
   width: 20px;
-  right: -5%;
+  left: inherit;
   top: 100%;
+  right: -5%;
+  bottom: inherit;
+  animation: star infinite alternate 1000ms ease;
+}
+@keyframes star {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  100% {
+    transform: rotate(100deg) scale(0.7);
+  }
 }
 .about_section .about_left {
   display: flex;
@@ -492,23 +546,100 @@ header .strp .strp_down {
 }
 .about_section .about_center {
   position: relative;
-  border: 2px dashed #dedede;
+  border: 2px solid #dedede;
   border-radius: 160px;
   padding: 10px;
-  width: 285px;
-  height: 410px;
-  transform-origin: center center;
 }
-@keyframes border_rotate {
+.about_section .about_center::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 388px;
+  background-size: 1% 2%;
+  background-image: linear-gradient(rgba(222, 222, 222, 0.1490196078), rgba(222, 222, 222, 0.168627451) 1px, rgba(0, 0, 0, 0.0509803922) 1px, rgba(0, 0, 0, 0.0509803922) 12px);
+  animation: repeting 7s infinite linear;
+  border-radius: 160px;
+}
+@keyframes repeting {
   0% {
-    transform: rotate(0deg);
+    background-position: 0% 0%;
   }
   100% {
-    transform: rotate(360deg);
+    background-position: 100% 100%;
   }
 }
 .about_section .about_center img {
   width: 260px;
+}
+
+.exclusiveShot_section {
+  margin-top: 90px;
+}
+.exclusiveShot_section .exclusiveShot_title {
+  margin-bottom: 60px;
+}
+.exclusiveShot_section .exclusiveShot_title h1 {
+  text-align: center;
+  font-family: "simplifydemo";
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1;
+}
+.exclusiveShot_section .exclusiveShot {
+  position: relative;
+}
+.exclusiveShot_section .exclusiveShot a {
+  position: absolute;
+  display: flex;
+  color: #000;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-family: "simplifydemo";
+  padding-right: 5px;
+  width: 25px;
+  writing-mode: tb;
+  letter-spacing: 2px;
+  filter: contrast(2);
+  transition: transfrom 5s linear;
+}
+.exclusiveShot_section .exclusiveShot a:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+.exclusiveShot_section .exclusiveShot .exclusiveShot_item_1 {
+  position: relative;
+}
+.exclusiveShot_section .exclusiveShot .exclusiveShot_item_1 img {
+  width: 100%;
+}
+.exclusiveShot_section .exclusiveShot .exclusiveShot_item_2 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  position: relative;
+}
+.exclusiveShot_section .exclusiveShot .exclusiveShot_item_2 img {
+  position: absolute;
+  width: 166px;
+}
+.exclusiveShot_section .exclusiveShot .paralax {
+  animation: paralax forwards 0.8s linear;
+}
+@keyframes paralax {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
 }
 
 body {

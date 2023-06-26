@@ -8,16 +8,14 @@
     margin-bottom: 60px;
 
     h1 {
-      text-align: center;
-      font-family: $title_family;
-      font-size: $title_font;
-      font-weight: $title_weight;
+      @include title();
     }
     .star {
-      position: absolute;
-      width: 20px;
-      right: -5%;
-      top: 100%;
+      @include star_effect($rit:-5%,$top:100%);
+      // position: absolute;
+      // width: 20px;
+      // right: -5%;
+      // top: 100%;
     }
   }
 
@@ -47,20 +45,32 @@
 
   .about_center {
     position: relative;
-    @include border($divider:dashed,$radious:160px);
+    @include border($radious:160px);
     padding: 10px;
-    width: 285px;
-    height: 410px;
-    transform-origin: center center;
-    // animation: border_rotate infinite 3s linear;
 
-    @keyframes border_rotate {
-      0%{
-        transform: rotate(0deg);
+    &::before {
+      position: absolute;
+      content: "";
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 260px;
+      height: 388px;
+      background-size: 1% 2%;
+      background-image: linear-gradient(#dedede26, #dedede2b 1px, #0000000d 1px, #0000000d 12px);
+      animation: repeting 7s infinite linear;
+      border-radius: 160px;
+
+      @keyframes repeting {
+        0%{
+          background-position: 0% 0%;
+        }
+        100% {
+          background-position: 100% 100%;
+        }
+        
       }
-      100% {
-        transform: rotate(360deg);
-      }
+      
     }
 
     img {

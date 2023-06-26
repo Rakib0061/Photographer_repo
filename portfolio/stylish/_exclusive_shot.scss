@@ -1,0 +1,74 @@
+@import "./variable";
+
+.exclusiveShot_section {
+  margin-top: 90px;
+
+  .exclusiveShot_title {
+    margin-bottom: 60px;
+
+    h1 {
+      @include title();
+    }
+  }
+
+  .exclusiveShot {
+    position: relative;
+
+    a {
+      position: absolute;
+      display: flex;
+      color: #000;
+      text-decoration: none;
+      justify-content: center;
+      align-items: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      font-family: $title_family;
+      padding-right: 5px;
+      width: 25px;
+      writing-mode: tb;
+      letter-spacing: 2px;
+      filter: contrast(02);
+      transition: transfrom 5s linear;
+
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.05);
+      }
+    }
+
+    .exclusiveShot_item_1 {
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .exclusiveShot_item_2 {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      position: relative;
+
+      img {
+        position: absolute;
+        width: 166px;
+      }
+    }
+
+    .paralax {
+      animation: paralax forwards 0.8s linear;
+      @keyframes paralax{
+        0%{
+          transform: translateY(0);
+        }
+        100%{
+          transform: translateY(-50px);
+        }
+      }
+    }
+  }
+}
