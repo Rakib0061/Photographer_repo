@@ -8,7 +8,7 @@
     align-items: center;
     margin-bottom: 60px;
 
-    .star {
+    & > img {
       @include star_effect(-5%, 100%);
     }
 
@@ -61,25 +61,25 @@
             margin: 0;
             width: 210px;
           }
-  
+
           img {
             width: 0px;
             margin: 0 7px 0 0;
           }
-  
+
           &:hover {
             color: $prime_color;
           }
-  
+
           &:hover::before {
             opacity: 1;
           }
-  
+
           &:hover img {
             width: 130px;
             color: #000;
           }
-  
+
           &::before {
             position: absolute;
             content: "";
@@ -91,8 +91,6 @@
             background-color: $mild_color;
             z-index: -1;
           }
-        
-
         }
       }
     }

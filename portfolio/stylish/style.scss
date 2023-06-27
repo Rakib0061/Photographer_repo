@@ -10,6 +10,43 @@
 body {
   font-family: $prime_family !important;
   background-color: $body_bg !important;
+  position: relative;
+
+  .phone {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 300px;
+    text-align: center;background-color: #ccc;
+    @include border($wd:0,$radious:20px);
+    padding: 20px;
+    box-shadow: 0px 0px 20px 0px #222;
+    z-index: 20;
+
+    h4 {
+        font-size: $h_font;
+        font-weight: $p_weight;
+    }
+    input {
+        margin: 20px 0 0;
+        height: 50px;
+        padding: 15px;
+        @include border($radious:20px);
+        font-size: $p_font;
+        font-weight: $p_weight;
+
+        &::placeholder {
+            text-align: center;
+            font-size: $p_font;
+            font-weight: $p_weight;
+        }
+
+    }
+
+}
 
   // @@@@@@@@@@@@@@@  scroll bar  @@@@@@@@@@@@@@@
   

@@ -140,7 +140,7 @@ header {
         position: relative;
         margin: 0 250px 0 0;
 
-        .star {
+        & > img {
           @include star_effect(0, 12%);
         }
 
@@ -220,12 +220,8 @@ header {
           font-family: $prime_family;
         }
 
-        .star {
-          @include star_effect($rit:-10%,$top:100%);
-          // position: absolute;
-          // width: 20px;
-          // right: -10%;
-          // top: 100%;
+        & > img {
+          @include star_effect($rit: -10%, $top: 100%);
         }
 
         .hero_right_title {
@@ -352,7 +348,7 @@ header {
 
       a {
         text-decoration: none;
-        
+
         ul {
           display: flex;
           flex-direction: row;
@@ -360,7 +356,7 @@ header {
           margin: 0;
           justify-content: space-around;
           align-items: center;
-  
+
           li {
             list-style: none;
             padding: 0 25px;
