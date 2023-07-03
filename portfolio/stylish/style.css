@@ -644,6 +644,7 @@ header .strp .strp_down {
 
 .slider_section {
   margin-top: 90px;
+  position: relative;
 }
 .slider_section .slider_title {
   margin-bottom: 60px;
@@ -736,50 +737,107 @@ header .strp .strp_down {
 .slider_section .slider_title address .input_item button:hover p {
   color: #fff;
 }
+.slider_section .slider {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+}
+.slider_section .slider .slider_img {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%);
+}
+.slider_section .slider .slider_img img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: none;
+     object-fit: none;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 100%;
+  box-shadow: 0px 0px 20px 0px rgba(102, 102, 102, 0.4901960784);
+}
 
 body {
   font-family: "Hepta Slab" !important;
   background-color: #fefaeb !important;
   position: relative;
 }
-body .phone {
+body form .form_input {
   display: none;
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
   width: 300px;
   height: 300px;
   text-align: center;
-  background-color: #ccc;
+  background: linear-gradient(137deg, #fefaeb 90%, #c64b4b 5%);
   border: 0 solid #dedede;
   border-radius: 20px;
-  padding: 20px;
+  padding: 35px 15px;
   box-shadow: 0px 0px 20px 0px #222;
   z-index: 20;
 }
-body .phone h4 {
-  font-size: 23px;
+body form .form_input h4 {
+  letter-spacing: 1px;
+  font-family: "simplifydemo";
+  font-size: 30px;
   font-weight: 600;
 }
-body .phone input {
+body form .form_input hr {
+  color: #666666;
+}
+body form .form_input input,
+body form .form_input textarea,
+body form .form_input [type=submit] {
   margin: 20px 0 0;
   height: 50px;
   padding: 15px;
   border: 2px solid #dedede;
-  border-radius: 20px;
+  border-radius: 15px;
   font-size: 15px;
   font-weight: 600;
+  color: #666666;
 }
-body .phone input::-moz-placeholder {
+body form .form_input input::-moz-placeholder, body form .form_input textarea::-moz-placeholder, body form .form_input [type=submit]::-moz-placeholder {
   text-align: center;
   font-size: 15px;
   font-weight: 600;
 }
-body .phone input::placeholder {
+body form .form_input input::placeholder,
+body form .form_input textarea::placeholder,
+body form .form_input [type=submit]::placeholder {
   text-align: center;
   font-size: 15px;
   font-weight: 600;
+}
+body form .form_input input:focus,
+body form .form_input textarea:focus,
+body form .form_input [type=submit]:focus {
+  outline: none;
+}
+body form .form_input > img {
+  position: absolute;
+  width: 20px;
+  left: 10%;
+  top: 80%;
+  right: inherit;
+  bottom: inherit;
+  animation: star infinite alternate 1000ms ease;
+}
+@keyframes star {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  100% {
+    transform: rotate(100deg) scale(0.7);
+  }
 }
 body::-webkit-scrollbar {
   background-color: #fefaeb;

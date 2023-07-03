@@ -6,6 +6,7 @@ $secendory_color: #9ee96d;
 $body_bg: #fefaeb;
 $dark_blk: #222222;
 $light_blk: #666666;
+$shadow_blk: #6666667d;
 $border: #dedede;
 $sticky_navbar_bg: #fefaeb99;
 $sticky_navbar_sadow: #c1c1c163;
@@ -25,6 +26,7 @@ $cv_btn_icon__font: 42px;
 $p_font: 15px;
 $p_font_sm: 13px;
 $h_font: 23px;
+$h_font_xl: 30px;
 $h_font_sm: 18px;
 $stripe_font: 18px;
 $p_weight: 600;
@@ -35,7 +37,7 @@ $title_weight: 500;
 
 // @@@@@@@@@@@@@@@@@@@@@@@@ mixin @@@@@@@@@@@@@@@@@@@@@@@@
 
-@mixin border($wd: 2px,$divider:solid, $clr: $border, $radious: 100%) {
+@mixin border($wd: 2px, $divider: solid, $clr: $border, $radious: 100%) {
   border: $wd $divider $clr;
   border-radius: $radious;
 }
@@ -44,7 +46,7 @@ $title_weight: 500;
   box-shadow: 0px 0px 7px 1px $sdo;
 }
 
-@mixin title($align:center){
+@mixin title($align: center) {
   text-align: $align;
   font-family: $title_family;
   font-size: $title_font;
@@ -52,7 +54,12 @@ $title_weight: 500;
   line-height: 1;
 }
 
-@mixin star_effect($lft:inherit,$top:inherit,$rit:inherit,$btom:inherit){
+@mixin star_effect(
+  $lft: inherit,
+  $top: inherit,
+  $rit: inherit,
+  $btom: inherit
+) {
   position: absolute;
   width: 20px;
   left: $lft;
@@ -62,10 +69,10 @@ $title_weight: 500;
   animation: star infinite alternate 1000ms ease;
 
   @keyframes star {
-    0%{
+    0% {
       transform: rotate(0deg) scale(0);
     }
-    100%{
+    100% {
       transform: rotate(100deg) scale(0.7);
     }
   }

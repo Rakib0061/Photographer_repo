@@ -9,7 +9,7 @@ window.addEventListener("scroll", () => {
 
 //  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Sticky Navbar @@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-//  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Sticky Navbar @@@@@@@@@@@@@@@@@@@@@@@@@@@
+//  @@@@@@@@@@@@@@@@@@@@@@@@@@@ CV roted effect @@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 const cv_btn_p = document.getElementById("cv_btn_p");
 const cv_btn = document.getElementById("cv_btn");
@@ -24,9 +24,9 @@ cv_btn_p.innerHTML = cv_btn_p.innerText
   )
   .join("");
 
-//  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Sticky Navbar @@@@@@@@@@@@@@@@@@@@@@@@@@@
+//  @@@@@@@@@@@@@@@@@@@@@@@@@@@ CV roted effect @@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-//  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Sticky Navbar @@@@@@@@@@@@@@@@@@@@@@@@@@@
+//  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Paralax Effect @@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 let exclusiveShot_item_2 = document.querySelectorAll(".exclusiveShot_item_2");
 
@@ -44,7 +44,7 @@ document.addEventListener("scroll", () => {
   }
 });
 
-//  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Sticky Navbar @@@@@@@@@@@@@@@@@@@@@@@@@@@
+//  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Paralax Effect @@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 //  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Button sound effect @@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -54,7 +54,6 @@ const audio_track1 = new Audio();
 const audio_track2 = new Audio();
 audio_track1.src = "./portfolio/photos/a_click.wav";
 audio_track2.src = "./portfolio/photos/btn_click.wav";
-
 
 for (let i = 0; i < a_tag.length; i++) {
   a_tag[i].addEventListener("click", () => {
@@ -68,23 +67,113 @@ for (let i = 0; i < button_tag.length; i++) {
   });
 }
 
-
 //  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Button sound effect @@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-
 
 //  @@@@@@@@@@@@@@@@@@@@@@@@@@@ address button @@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-const phone_todo = document.getElementById("phone_todo");
-const phone_btn = document.getElementById("phone_btn");
+const form_input = document.querySelectorAll(".form_input");
+const form_btn = document.querySelectorAll(".form_btn");
 
-phone_btn.addEventListener("click", () => {
-  if (phone_todo.style.display != "block") {
-    phone_todo.style.display = "block";
+for (let i = 0; i < form_btn.length; i++) {
+  form_btn[i].addEventListener("click", () => {
+    if (form_input[i].style.display != "block") {
+      form_input[i].style.display = "block";
+    } else {
+      form_input[i].style.display = "none";
+    }
+  });
+}
+
+//  @@@@@@@@@@@@@@@@@@@@@@@@@@@ address button @@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+//  @@@@@@@@@@@@@@@@@@@@@@@@@@@ swiper Slider use @@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+// var swiper = new Swiper(".mySwiper", {
+//   slidesPerView: 6,
+//   spaceBetween: 0,
+//   freeMode: true,
+//   speed: 1000,
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+// })
+
+//  @@@@@@@@@@@@@@@@@@@@@@@@@@@ swiper Slider use @@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+//  @@@@@@@@@@@@@@@@@@@@@@@@@@@ custom Slider  @@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+const slider = document.getElementById("slider");
+const slider_img = document.getElementById("slider_img");
+const slider_item = document.querySelectorAll(".slider_item");
+let init_click_point = 0;
+let recall = 0;
+
+slider.addEventListener("mousedown", (e) => {
+  // <<<<<<<<<<<<<<<<<<< whre i click >>>>>>>>>>>>>>>>>>>>>>>>>>
+  init_click_point = e.clientX;
+  slider.style.cursor = "grabbing";
+});
+
+slider.addEventListener("mouseup", () => {
+  init_click_point = 0;
+  slider.style.cursor = "grab";
+});
+
+slider.addEventListener("mousemove", (e) => {
+  // <<<<<<<<<<<<<<<<<<< after click  how far i move >>>>>>>>>>>>>>>>>>>>>>>>>>
+  if (init_click_point === 0) {
+    return;
   }
   else {
-    phone_todo.style.display = "none";
+    // <<<<<<<<<<<<<<<<<<<<< work with init click point >>>>>>>>>>>>>>>>
+    let range_bar =
+        init_click_point -
+        e.clientX /* substract prev click point from new click point and get the invisible scrollbar width */,
+      max_transfrom =
+        window.innerWidth /* transfrom half of screen as though transfrom not full div on screen */,
+      range_bar_count =
+        (range_bar / max_transfrom) *
+        -90 /* if i divide those two i can get how many pixel have in invsivle slider...those are two short number thats why multiple by 100(neg valu make right derection) */,
+      // <<<<<<<<<<<<<<<<<<<<< work with secend click point >>>>>>>>>>>>>>>>
+      range_bar_vlu_Underconstract = range_bar_count + recall,
+      range_bar_vlu = Math.max(
+        Math.min(range_bar_vlu_Underconstract, 0),-100
+      ); /* set max min vlu for transfrom point */
+
+    // <<<<<<<<<<<<<<<<<<< work with continue update position >>>>>>>>>>>>>>>>
+    recall =
+      range_bar_vlu; /* as if it can remember my transform position thats why i constantly update second click  oint from here */
+
+    // <<<<<<<<<<<<<<<<<<<<< style property >>>>>>>>>>>>>>>>
+    slider_img.animate(
+      {
+        // keyframs
+        transform: `translate(${range_bar_vlu}%, -50%)`,
+        easing: "cubic-bezier(.48,.9,.16,.69)",
+      },
+      {
+        // timing options
+        duration: 2500,
+        fill: "forwards",
+      }
+    );
+    slider_item.forEach((vlu) => {
+      vlu.animate(
+        {
+          // keyframs
+          objectPosition: `${range_bar_vlu * -1}% 50%`,
+          easing: "cubic-bezier(.48,.9,.16,.69)",
+        },
+        {
+          //  timing option
+          duration: 2800,
+          fill: "forwards",
+          // direction: "alternate",
+        }
+      );
+    });
   }
 });
 
-//  @@@@@@@@@@@@@@@@@@@@@@@@@@@ address button @@@@@@@@@@@@@@@@@@@@@@@@@@@
+//  @@@@@@@@@@@@@@@@@@@@@@@@@@@ custom Slider @@@@@@@@@@@@@@@@@@@@@@@@@@@

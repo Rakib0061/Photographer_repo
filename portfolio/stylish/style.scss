@@ -12,55 +12,78 @@ body {
   background-color: $body_bg !important;
   position: relative;
 
-  .phone {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 300px;
-    height: 300px;
-    text-align: center;background-color: #ccc;
-    @include border($wd:0,$radious:20px);
-    padding: 20px;
-    box-shadow: 0px 0px 20px 0px #222;
-    z-index: 20;
+  // @@@@@@@@@@@@@@@  Form section  @@@@@@@@@@@@@@@
 
-    h4 {
-        font-size: $h_font;
+  form {
+    .form_input {
+      display: none;
+      position: fixed;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+      width: 300px;
+      height: 300px;
+      text-align: center;
+      background: linear-gradient(137deg, #fefaeb 90%, #c64b4b 5%);
+      @include border($wd: 0, $radious: 20px);
+      padding: 35px 15px;
+      box-shadow: 0px 0px 20px 0px #222;
+      z-index: 20;
+
+      h4 {
+        letter-spacing: 1px;
+        font-family: $title_family;
+        font-size: $h_font_xl;
         font-weight: $p_weight;
-    }
-    input {
+      }
+
+      hr {
+        color: $light_blk;
+      }
+      input,
+      textarea,
+      [type="submit"] {
         margin: 20px 0 0;
         height: 50px;
         padding: 15px;
-        @include border($radious:20px);
+        @include border($radious: 15px);
         font-size: $p_font;
         font-weight: $p_weight;
+        color: $light_blk;
 
         &::placeholder {
-            text-align: center;
-            font-size: $p_font;
-            font-weight: $p_weight;
+          text-align: center;
+          font-size: $p_font;
+          font-weight: $p_weight;
         }
 
-    }
+        &:focus {
+          outline: none;
+        }
+      }
 
-}
+      & > img {
+        @include star_effect($lft: 10%, $top: 80%);
+      }
+    }
+  }
+
+  // @@@@@@@@@@@@@@@  Form section  @@@@@@@@@@@@@@@
 
   // @@@@@@@@@@@@@@@  scroll bar  @@@@@@@@@@@@@@@
-  
+
   &::-webkit-scrollbar {
     background-color: $body_bg;
     width: 10px;
 
     &:hover {
-      box-shadow:  inset 0px 0px 5px #00000040;
+      box-shadow: inset 0px 0px 5px #00000040;
     }
-
   }
   &::-webkit-scrollbar-thumb {
     background-color: $prime_color;
-    @include border($clr:$body_bg, $wd: 2px, $radious: 16px);
+    @include border($clr: $body_bg, $wd: 2px, $radious: 16px);
   }
+
+  // @@@@@@@@@@@@@@@  scroll bar  @@@@@@@@@@@@@@@
 }
