@@ -46,10 +46,10 @@ $title_weight: 500;
   box-shadow: 0px 0px 7px 1px $sdo;
 }
 
-@mixin title($align: center) {
+@mixin title($align: center,$f_siz:$title_font) {
   text-align: $align;
   font-family: $title_family;
-  font-size: $title_font;
+  font-size: $f_siz;
   font-weight: $title_weight;
   line-height: 1;
 }

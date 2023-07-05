@@ -1,3 +1,32 @@
+//  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Preloader @@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+const word_span = document.querySelectorAll(".word_span");
+const preloader = document.querySelector(".preloader");
+const alphabat = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+window.addEventListener("load", (e) => {
+  // preloader.style.display = "none";
+
+  function change_loop() {
+    // make random alphabet
+    word_span.forEach((vlu) => {
+      let text = vlu.getAttribute("value").split("").map(vlu =>
+        alphabat.charAt(Math.floor(Math.random() * alphabat.length))
+      ).join("");
+      
+      vlu.innerHTML = text;
+    });
+
+    // create an animate  func
+    requestAnimationFrame(change_loop);
+
+  }
+
+  change_loop();
+});
+
+//  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Preloader @@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 //  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Sticky Navbar @@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 const navbar = document.querySelector(".navbar");
@@ -124,8 +153,7 @@ slider.addEventListener("mousemove", (e) => {
   // <<<<<<<<<<<<<<<<<<< after click  how far i move >>>>>>>>>>>>>>>>>>>>>>>>>>
   if (init_click_point === 0) {
     return;
-  }
-  else {
+  } else {
     // <<<<<<<<<<<<<<<<<<<<< work with init click point >>>>>>>>>>>>>>>>
     let range_bar =
         init_click_point -
@@ -134,11 +162,12 @@ slider.addEventListener("mousemove", (e) => {
         window.innerWidth /* transfrom half of screen as though transfrom not full div on screen */,
       range_bar_count =
         (range_bar / max_transfrom) *
-        -90 /* if i divide those two i can get how many pixel have in invsivle slider...those are two short number thats why multiple by 100(neg valu make right derection) */,
+        -30 /* if i divide those two i can get how many pixel have in invsivle slider...those are two short number thats why multiple by 100(neg valu make right derection) */,
       // <<<<<<<<<<<<<<<<<<<<< work with secend click point >>>>>>>>>>>>>>>>
       range_bar_vlu_Underconstract = range_bar_count + recall,
       range_bar_vlu = Math.max(
-        Math.min(range_bar_vlu_Underconstract, 0),-100
+        Math.min(range_bar_vlu_Underconstract, 0),
+        -100
       ); /* set max min vlu for transfrom point */
 
     // <<<<<<<<<<<<<<<<<<< work with continue update position >>>>>>>>>>>>>>>>
@@ -163,7 +192,7 @@ slider.addEventListener("mousemove", (e) => {
         {
           // keyframs
           objectPosition: `${range_bar_vlu * -1}% 50%`,
-          easing: "cubic-bezier(.48,.9,.16,.69)",
+          easing: "cubic-bezier(.37,.89,.37,.89)",
         },
         {
           //  timing option
