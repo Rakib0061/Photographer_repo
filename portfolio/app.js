@@ -3,26 +3,63 @@
 const word_span = document.querySelectorAll(".word_span");
 const preloader = document.querySelector(".preloader");
 const alphabat = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let incresing = 0;
+let looping;
 
-window.addEventListener("load", (e) => {
-  // preloader.style.display = "none";
+window.addEventListener("load", () => {
 
   function change_loop() {
     // make random alphabet
     word_span.forEach((vlu) => {
-      let text = vlu.getAttribute("value").split("").map(vlu =>
-        alphabat.charAt(Math.floor(Math.random() * alphabat.length))
-      ).join("");
-      
+      let text = vlu.getAttribute("value").split("").map((vlu, indx) => {
+          if (indx < incresing) {
+            return vlu;
+          }
+          else {
+            return alphabat.charAt(Math.floor(Math.random() * alphabat.length));
+          }
+        }).join("");
+      incresing += 1 / 150;
       vlu.innerHTML = text;
     });
 
-    // create an animate  func
-    requestAnimationFrame(change_loop);
+    // looping this animation 
+    if (incresing > 16) {
+      cancelAnimationFrame(looping);
 
+      //  make a keyframe for opacity
+      preloader.animate(
+        {
+          opacity: [0.2, 0],
+          easing: "cubic-bezier(0, 0 ,1 ,1)",
+        },
+        {
+          duration: 1000,
+          fill: "forwards"
+        }
+      );
+        
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 1500);
+      
+      return;
+    }
+
+    looping = requestAnimationFrame(change_loop);
   }
 
   change_loop();
+
+  // make scroll bar top when i reload page 
+
+  if(history.scrollRestoration){
+    history.scrollRestoration = "manual"
+  }
+  else {
+    window.scrollTo(0,0)
+  }
+
 });
 
 //  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Preloader @@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -162,7 +199,7 @@ slider.addEventListener("mousemove", (e) => {
         window.innerWidth /* transfrom half of screen as though transfrom not full div on screen */,
       range_bar_count =
         (range_bar / max_transfrom) *
-        -30 /* if i divide those two i can get how many pixel have in invsivle slider...those are two short number thats why multiple by 100(neg valu make right derection) */,
+        -40 /* if i divide those two i can get how many pixel have in invsivle slider...those are two short number thats why multiple by 100(neg valu make right derection) */,
       // <<<<<<<<<<<<<<<<<<<<< work with secend click point >>>>>>>>>>>>>>>>
       range_bar_vlu_Underconstract = range_bar_count + recall,
       range_bar_vlu = Math.max(
@@ -191,7 +228,7 @@ slider.addEventListener("mousemove", (e) => {
       vlu.animate(
         {
           // keyframs
-          objectPosition: `${range_bar_vlu * -1}% 50%`,
+          objectPosition: `${-range_bar_vlu}% 50%`,
           easing: "cubic-bezier(.37,.89,.37,.89)",
         },
         {
