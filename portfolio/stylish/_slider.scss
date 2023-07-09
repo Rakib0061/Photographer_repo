@@ -3,6 +3,7 @@
 .slider_section {
   margin-top: 90px;
   position: relative;
+  margin-bottom: 0;
 
   .slider_title {
     margin-bottom: 60px;
@@ -94,6 +95,7 @@
     position: relative;
     overflow: hidden;
     cursor: grab;
+    background: $slider_bg;
 
     .slider_img {
       display: flex;

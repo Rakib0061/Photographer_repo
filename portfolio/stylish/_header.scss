@@ -105,12 +105,13 @@ header {
         align-items: center;
         width: 150px;
         height: 150px;
-        bottom: -2%;
+        bottom: -1%;
         left: 50%;
         margin: 0;
         padding: 0;
         @include border(0px);
         background: transparent;
+        cursor: pointer;
 
         div {
           position: relative;
