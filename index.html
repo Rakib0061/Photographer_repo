@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./portfolio/font/stylesheet.css" />
   </head>
   <body>
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ Preloader Section @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- ########################## Preloader Section ########################## -->
     <div class="preloader">
       <div class="all_word">
         <p class="word">
@@ -44,11 +44,9 @@
         </p>
       </div>
     </div>
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ Preloader Section @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- ########################## Preloader Section ########################## -->
 
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ Form Section @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-
-    <!-- ######### this area are link with contect section button ######### -->
+    <!-- ############ this area are link with contect section button ############ -->
     <form action="">
       <div class="form_input">
         <h4>Let's get in touch</h4>
@@ -72,12 +70,11 @@
         <img src="./portfolio/photos/star.png" alt="star" />
       </div>
     </form>
-    <!-- ######### this area are link with contect section button ######### -->
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ Form Section @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- ############ this area are link with contect section button ############ -->
 
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ HEADER SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ HEADER SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
     <header>
-      <nav class="navbar navbar-expand-sm">
+      <nav class="navbar navbar-expand-sm" id="navId">
         <div class="container justify-content-between align-items-center">
           <a class="navbar-brand" href="#">
             <img src="./portfolio/photos/logo.png" alt="logo" />
@@ -97,9 +94,9 @@
             class="collapse navbar-collapse justify-content-center"
             id="navbarSupportedContent"
           >
-            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav nav nav-pills m-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#Project">Project</a>
@@ -226,361 +223,328 @@
       </div>
       <!-- ############################ BANNER AREA ############################ -->
     </header>
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ HEADER SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ HEADER SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ GALLERY SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-    <figure id="Project" class="gallery_section">
-      <main class="container">
-        <div class="gallery_title">
-          <h1>I giving best solution for your celebrations</h1>
-          <button>
-            <p>View All</p>
-            <img src="./portfolio/photos/long_arrow.png" alt="long_arrow" />
-          </button>
-          <img src="./portfolio/photos/star.png" alt="star" />
-        </div>
-        <div class="row">
-          <div class="col-xl">
-            <div class="gallery_left">
-              <ul>
-                <li>
-                  <a href="#">
-                    <p>Project Shoot</p>
-                    <img
-                      src="./portfolio/photos/long_arrow2.png"
-                      alt="long_arrow2"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <p>Wedding Shoot</p>
-                    <img
-                      src="./portfolio/photos/long_arrow2.png"
-                      alt="long_arrow2"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <p>Exhibitions Shoot</p>
-                    <img
-                      src="./portfolio/photos/long_arrow2.png"
-                      alt="long_arrow2"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <p>Magazine Shoot</p>
-                    <img
-                      src="./portfolio/photos/long_arrow2.png"
-                      alt="long_arrow2"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <p>Advertise Shoot</p>
-                    <img
-                      src="./portfolio/photos/long_arrow2.png"
-                      alt="long_arrow2"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <p>Birth-Day_party Shoot</p>
-                    <img
-                      src="./portfolio/photos/long_arrow2.png"
-                      alt="long_arrow2"
-                    />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-8">
-            <div class="gallery_right">
-              <div class="gallery_img">
-                <div class="img_content">
-                  <p>Keep It Calm</p>
-                  <img src="./portfolio/photos/art_1.png" alt="art_1" />
-                </div>
-                <div class="img_content">
-                  <img src="./portfolio/photos/art_2.png" alt="art_2" />
-                  <p>Art Prints</p>
-                </div>
-                <div class="img_content">
-                  <p>History of today</p>
-                  <img src="./portfolio/photos/art_3.png" alt="art_3" />
-                </div>
-                <div class="img_content">
-                  <img src="./portfolio/photos/art_4.png" alt="art_4" />
-                  <p>Imagion</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </figure>
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ GALLERY SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <div data-bs-spy="scroll" data-bs-target="#navId" class="spy" tabindex="0">
+      <!--  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ SPY UNDER THOSE DIV $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  -->
 
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ ABOUT SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-    <figure id="About" class="about_section">
-      <main class="container">
-        <div class="about_title">
-          <h1>About Al Muzil</h1>
-          <img src="./portfolio/photos/star.png" alt="star" />
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-xl-3">
-            <div class="about_left">
-              <div class="about_left_item">
-                <h4>My Vision</h4>
-                <p>
-                  My vision A young and enthusiastic photographer ready to
-                  travel the world in a heartbeat. My philosophy A young and
-                  enthusiastic photographer ready to travel the world in a
-                  heartbeat.
-                </p>
-              </div>
-              <div class="about_left_item">
-                <h4>My Vision</h4>
-                <p>
-                  My vision A young and enthusiastic photographer ready to
-                  travel the world in a heartbeat. My philosophy A young and
-                  enthusiastic photographer ready to travel the world in a
-                  heartbeat.
-                </p>
-              </div>
-            </div>
+      <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ GALLERY SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+      <figure id="Project" class="gallery_section">
+        <main class="container">
+          <div class="gallery_title">
+            <h1>I giving best solution for your celebrations</h1>
+            <button>
+              <p>View All</p>
+              <img src="./portfolio/photos/long_arrow.png" alt="long_arrow" />
+            </button>
+            <img src="./portfolio/photos/star.png" alt="star" />
           </div>
-          <div class="col-xl-4 d-flex justify-content-center">
-            <div class="about_center">
-              <img src="./portfolio/photos/about_hero.png" alt="about_hero" />
-            </div>
-          </div>
-          <div class="col-xl-3">
-            <div class="about_left">
-              <div class="about_left_item">
-                <p>clients</p>
-                <h4>1.2k</h4>
-              </div>
-              <div class="about_left_item">
-                <p>Clients Satisfaction</p>
-                <h4>100%</h4>
-              </div>
-              <div class="about_left_item">
-                <p>Years In Industry</p>
-                <h4>12 years</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </figure>
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ ABOUT SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ EXCLUSIVE_SHOT SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-    <figure id="Exhibitions" class="exclusiveShot_section">
-      <main class="container">
-        <div class="exclusiveShot_title">
-          <h1>Al Muzil Exclusive Shoot</h1>
-        </div>
-        <div class="exclusiveShot">
-          <a href="#">RAKIB</a>
           <div class="row">
-            <div class="col-xl-2">
-              <div class="d-flex flex-column exclusiveShot_item_1">
-                <img src="./portfolio/photos/explu_1.png" alt="explu_1" />
-                <img
-                  class="paralax_down"
-                  src="./portfolio/photos/explu_2.png"
-                  alt="explu_2"
-                />
+            <div class="col-xl">
+              <div class="gallery_left">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <p>Project Shoot</p>
+                      <img
+                        src="./portfolio/photos/long_arrow2.png"
+                        alt="long_arrow2"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <p>Wedding Shoot</p>
+                      <img
+                        src="./portfolio/photos/long_arrow2.png"
+                        alt="long_arrow2"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <p>Exhibitions Shoot</p>
+                      <img
+                        src="./portfolio/photos/long_arrow2.png"
+                        alt="long_arrow2"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <p>Magazine Shoot</p>
+                      <img
+                        src="./portfolio/photos/long_arrow2.png"
+                        alt="long_arrow2"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <p>Advertise Shoot</p>
+                      <img
+                        src="./portfolio/photos/long_arrow2.png"
+                        alt="long_arrow2"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <p>Birth-Day_party Shoot</p>
+                      <img
+                        src="./portfolio/photos/long_arrow2.png"
+                        alt="long_arrow2"
+                      />
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="col-xl-2">
-              <div class="exclusiveShot_item_2">
-                <img src="./portfolio/photos/explu_3.png" alt="explu_3" />
-              </div>
-            </div>
-            <div class="col-xl-2">
-              <div class="d-flex flex-column exclusiveShot_item_1">
-                <img src="./portfolio/photos/explu_5.png" alt="explu_5" />
-                <img src="./portfolio/photos/explu_4.png" alt="explu_4" />
-              </div>
-            </div>
-            <div class="col-xl-2">
-              <div class="exclusiveShot_item_2">
-                <img src="./portfolio/photos/explu_6.png" alt="explu_6" />
-              </div>
-            </div>
-            <div class="col-xl-2">
-              <div class="d-flex flex-column exclusiveShot_item_1">
-                <img src="./portfolio/photos/explu_7.png" alt="explu_7" />
-                <img src="./portfolio/photos/explu_8.png" alt="explu_8" />
-              </div>
-            </div>
-            <div class="col-xl-2">
-              <div class="exclusiveShot_item_2">
-                <img src="./portfolio/photos/explu_9.png" alt="explu_9" />
+            <div class="col-xl-8">
+              <div class="gallery_right">
+                <div class="gallery_img">
+                  <div class="img_content">
+                    <p>Keep It Calm</p>
+                    <img src="./portfolio/photos/art_1.png" alt="art_1" />
+                  </div>
+                  <div class="img_content">
+                    <img src="./portfolio/photos/art_2.png" alt="art_2" />
+                    <p>Art Prints</p>
+                  </div>
+                  <div class="img_content">
+                    <p>History of today</p>
+                    <img src="./portfolio/photos/art_3.png" alt="art_3" />
+                  </div>
+                  <div class="img_content">
+                    <img src="./portfolio/photos/art_4.png" alt="art_4" />
+                    <p>Imagion</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </main>
-    </figure>
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ EXCLUSIVE_SHOT SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ SLIDER SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-    <figure id="Contact" class="slider_section">
-      <main class="container-fluid">
-        <div class="slider_title">
-          <img src="./portfolio/photos/star.png" alt="star" />
-          <h1>Let's get in touch</h1>
-          <p>
-            we belive to give people 100% satisfaction, not just give services
-          </p>
-          <address>
-            <div class="input_item">
-              <button class="form_btn">
-                <img
-                  src="./portfolio/photos/arrow_rotate.png"
-                  alt="arrow_rotate"
-                />
-                <p>Phone</p>
-              </button>
-            </div>
-            <div class="input_item">
-              <button class="form_btn">
-                <img
-                  src="./portfolio/photos/arrow_rotate.png"
-                  alt="arrow_rotate"
-                />
-                <p>Email</p>
-              </button>
-            </div>
-            <div class="input_item">
-              <button class="form_btn">
-                <img
-                  src="./portfolio/photos/arrow_rotate.png"
-                  alt="arrow_rotate"
-                />
-                <p>Address</p>
-              </button>
-            </div>
-          </address>
-        </div>
-
-        <!-- <div id="mySwiper" class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img class="item" src="./portfolio/photos/Ellipse 12.png" alt="Ellipse" />
-            </div>
-            <div class="swiper-slide">
-              <img class="item" src="./portfolio/photos/Ellipse 13.png" alt="Ellipse" />
-            </div>
-            <div class="swiper-slide">
-              <img class="item" src="./portfolio/photos/Ellipse 14.png" alt="Ellipse" />
-            </div>
-            <div class="swiper-slide">
-              <img class="item" src="./portfolio/photos/Ellipse 15.png" alt="Ellipse" />
-            </div>
-            <div class="swiper-slide">
-              <img class="item" src="./portfolio/photos/Ellipse 16.png" alt="Ellipse" />
-            </div>
-            <div class="swiper-slide">
-              <img class="item" src="./portfolio/photos/Ellipse 12.png" alt="Ellipse" />
-            </div>
-            <div class="swiper-slide">
-              <img class="item" src="./portfolio/photos/Ellipse 13.png" alt="Ellipse" />
-            </div>
-            <div class="swiper-slide">
-              <img class="item" src="./portfolio/photos/Ellipse 14.png" alt="Ellipse" />
-            </div>
-            <div class="swiper-slide">
-              <img class="item" src="./portfolio/photos/Ellipse 15.png" alt="Ellipse" />
-            </div>
-            <div class="swiper-slide">
-              <img class="item" src="./portfolio/photos/Ellipse 16.png" alt="Ellipse" />
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div> -->
-
-        <div id="slider" class="slider">
-          <div id="slider_img" class="slider_img">
-            <img
-              class="slider_item"
-              src="./portfolio/photos/Ellipse12.png"
-              draggable="false"
-              alt="Ellipse"
-            />
-            <img
-              class="slider_item"
-              src="./portfolio/photos/Ellipse13.png"
-              draggable="false"
-              alt="Ellipse"
-            />
-            <img
-              class="slider_item"
-              src="./portfolio/photos/Ellipse14.png"
-              draggable="false"
-              alt="Ellipse"
-            />
-            <img
-              class="slider_item"
-              src="./portfolio/photos/Ellipse15.png"
-              draggable="false"
-              alt="Ellipse"
-            />
-            <img
-              class="slider_item"
-              src="./portfolio/photos/Ellipse16.png"
-              draggable="false"
-              alt="Ellipse"
-            />
-            <img
-              class="slider_item"
-              src="./portfolio/photos/Ellipse12.png"
-              draggable="false"
-              alt="Ellipse"
-            />
-            <img
-              class="slider_item"
-              src="./portfolio/photos/Ellipse13.png"
-              draggable="false"
-              alt="Ellipse"
-            />
-            <img
-              class="slider_item"
-              src="./portfolio/photos/Ellipse14.png"
-              draggable="false"
-              alt="Ellipse"
-            />
-          </div>
-        </div>
-      </main>
-    </figure>
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ SLIDER SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ FOOTER SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-    <footer>
-      <figure class="container">
-        <div class="row">
-          <div class="col">
-            <main></main>
-          </div>
-        </div>
+        </main>
       </figure>
-    </footer>
+      <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ GALLERY SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
-    <a href="https://www.facebook.com/Rhythm0061">CLICK</a>
+      <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ ABOUT SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+      <figure id="About" class="about_section">
+        <main class="container">
+          <div class="about_title">
+            <h1>About Al Muzil</h1>
+            <img src="./portfolio/photos/star.png" alt="star" />
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-xl-3">
+              <div class="about_left">
+                <div class="about_left_item">
+                  <h4>My Vision</h4>
+                  <p>
+                    My vision A young and enthusiastic photographer ready to
+                    travel the world in a heartbeat. My philosophy A young and
+                    enthusiastic photographer ready to travel the world in a
+                    heartbeat.
+                  </p>
+                </div>
+                <div class="about_left_item">
+                  <h4>My Vision</h4>
+                  <p>
+                    My vision A young and enthusiastic photographer ready to
+                    travel the world in a heartbeat. My philosophy A young and
+                    enthusiastic photographer ready to travel the world in a
+                    heartbeat.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 d-flex justify-content-center">
+              <div class="about_center">
+                <img src="./portfolio/photos/about_hero.png" alt="about_hero" />
+              </div>
+            </div>
+            <div class="col-xl-3">
+              <div class="about_left">
+                <div class="about_left_item">
+                  <p>clients</p>
+                  <h4>1.2k</h4>
+                </div>
+                <div class="about_left_item">
+                  <p>Clients Satisfaction</p>
+                  <h4>100%</h4>
+                </div>
+                <div class="about_left_item">
+                  <p>Years In Industry</p>
+                  <h4>12 years</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </figure>
+      <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ ABOUT SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ FOOTER SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+      <!-- @@@@@@@@@@@@@@@@@@@@@@@ EXCLUSIVE_SHOT SECTION @@@@@@@@@@@@@@@@@@@@@@@ -->
+      <figure id="Exhibitions" class="exclusiveShot_section">
+        <main class="container">
+          <div class="exclusiveShot_title">
+            <h1>Al Muzil Exclusive Shoot</h1>
+          </div>
+          <div class="exclusiveShot">
+            <a href="#">RAKIB</a>
+            <div class="row">
+              <div class="col-xl-2">
+                <div class="d-flex flex-column exclusiveShot_item_1">
+                  <img src="./portfolio/photos/explu_1.png" alt="explu_1" />
+                  <img
+                    class="paralax_down"
+                    src="./portfolio/photos/explu_2.png"
+                    alt="explu_2"
+                  />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="exclusiveShot_item_2">
+                  <img src="./portfolio/photos/explu_3.png" alt="explu_3" />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="d-flex flex-column exclusiveShot_item_1">
+                  <img src="./portfolio/photos/explu_5.png" alt="explu_5" />
+                  <img src="./portfolio/photos/explu_4.png" alt="explu_4" />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="exclusiveShot_item_2">
+                  <img src="./portfolio/photos/explu_6.png" alt="explu_6" />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="d-flex flex-column exclusiveShot_item_1">
+                  <img src="./portfolio/photos/explu_7.png" alt="explu_7" />
+                  <img src="./portfolio/photos/explu_8.png" alt="explu_8" />
+                </div>
+              </div>
+              <div class="col-xl-2">
+                <div class="exclusiveShot_item_2">
+                  <img src="./portfolio/photos/explu_9.png" alt="explu_9" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </figure>
+      <!-- @@@@@@@@@@@@@@@@@@@@@@@ EXCLUSIVE_SHOT SECTION @@@@@@@@@@@@@@@@@@@@@@@ -->
+
+      <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ SLIDER SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+      <figure id="Contact" class="slider_section">
+        <main class="container-fluid">
+          <div class="slider_title">
+            <img src="./portfolio/photos/star.png" alt="star" />
+            <h1>Let's get in touch</h1>
+            <p>
+              we belive to give people 100% satisfaction, not just give services
+            </p>
+            <address>
+              <div class="input_item">
+                <button class="form_btn">
+                  <img
+                    src="./portfolio/photos/arrow_rotate.png"
+                    alt="arrow_rotate"
+                  />
+                  <p>Phone</p>
+                </button>
+              </div>
+              <div class="input_item">
+                <button class="form_btn">
+                  <img
+                    src="./portfolio/photos/arrow_rotate.png"
+                    alt="arrow_rotate"
+                  />
+                  <p>Email</p>
+                </button>
+              </div>
+              <div class="input_item">
+                <button class="form_btn">
+                  <img
+                    src="./portfolio/photos/arrow_rotate.png"
+                    alt="arrow_rotate"
+                  />
+                  <p>Address</p>
+                </button>
+              </div>
+            </address>
+          </div>
+
+          <div id="slider" class="slider">
+            <div id="slider_img" class="slider_img">
+              <img
+                class="slider_item"
+                src="./portfolio/photos/Ellipse12.png"
+                draggable="false"
+                alt="Ellipse"
+              />
+              <img
+                class="slider_item"
+                src="./portfolio/photos/Ellipse13.png"
+                draggable="false"
+                alt="Ellipse"
+              />
+              <img
+                class="slider_item"
+                src="./portfolio/photos/Ellipse14.png"
+                draggable="false"
+                alt="Ellipse"
+              />
+              <img
+                class="slider_item"
+                src="./portfolio/photos/Ellipse15.png"
+                draggable="false"
+                alt="Ellipse"
+              />
+              <img
+                class="slider_item"
+                src="./portfolio/photos/Ellipse16.png"
+                draggable="false"
+                alt="Ellipse"
+              />
+              <img
+                class="slider_item"
+                src="./portfolio/photos/Ellipse12.png"
+                draggable="false"
+                alt="Ellipse"
+              />
+              <img
+                class="slider_item"
+                src="./portfolio/photos/Ellipse13.png"
+                draggable="false"
+                alt="Ellipse"
+              />
+              <img
+                class="slider_item"
+                src="./portfolio/photos/Ellipse14.png"
+                draggable="false"
+                alt="Ellipse"
+              />
+            </div>
+          </div>
+        </main>
+      </figure>
+      <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ SLIDER SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+      <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ FOOTER SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+      <footer>
+        <figure class="container">
+          <div class="row">
+            <div class="col">
+              <main></main>
+            </div>
+          </div>
+        </figure>
+      </footer>
+      <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@ FOOTER SECTION @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+      <!--  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ SPY UPPER THOSE DIV $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  -->
+    </div>
 
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

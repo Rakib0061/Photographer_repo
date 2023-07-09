@@ -13,9 +13,11 @@ header nav .collapse .navbar-nav .nav-item {
   padding: 0 20px;
 }
 header nav .collapse .navbar-nav .nav-item .nav-link {
+  position: relative;
   font-size: 16px;
   font-weight: 500;
   color: #666666;
+  text-shadow: 0px 0px 10px #ffffff;
 }
 header nav .collapse button {
   width: 130px;
@@ -26,6 +28,17 @@ header nav .collapse button {
   color: #fff;
   font-size: 16px;
   font-weight: 500;
+}
+header .nav-pills .nav-link.active, header .nav-pills .show > .nav-link {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border: 0 solid #dedede;
+  border-radius: 10px;
+  background: repeating-conic-gradient(from 28deg at 15% 30%, #9ee96d 0deg, #fefaeb 20deg 30deg);
+}
+header .nav-pills .nav-link.active:hover, header .nav-pills .show > .nav-link:hover {
+  background: repeating-conic-gradient(from 45deg at 15% 30%, #9ee96d 0deg, #fefaeb 20deg 30deg);
 }
 header .sticky {
   position: fixed;

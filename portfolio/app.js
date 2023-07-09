@@ -41,7 +41,7 @@ window.addEventListener("load", () => {
         
       setTimeout(() => {
         preloader.style.display = "none";
-      }, 1500);
+      }, 1100);
       
       return;
     }
