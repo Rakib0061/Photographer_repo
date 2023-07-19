@@ -1,0 +1,196 @@
+/* XXL  */
+@media (max-width:1650.98px) {
+    body::-webkit-scrollbar {
+        width: 13px;
+    }
+
+    header nav .collapse button {
+        padding: 12px 30px;
+    }
+
+    header figure .middle h1 {
+        left: 37%;
+    }
+
+    header .strp .strp_up a ul li {
+        font-size: 26px;
+    }
+    
+}
+
+@media (max-width:1399.98px) {
+
+    header nav .collapse button {
+        font-size: 27px;
+        padding: 9px 24px;
+    }
+
+    header nav a h1 {
+        font-size: 27px;
+    }
+
+    header figure main .hero_left .hero_left_title {
+        width: 140px;
+        height: 140px;
+    }
+
+    header figure main .hero_left .hero_left_title .drow_line {
+        width: 230px;
+        height: 362px;
+    }
+
+    header figure main .hero_left .hero_left_title h1 {
+        font-size: 80px;
+    }
+
+    header figure main .hero_left .hero_left_img {
+        width: 320px;
+        height: 320px;
+    }
+
+    header figure main .hero_left .hero_left_img .circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    header figure main .hero_left .hero_left_img .circle img {
+        position: absolute;
+        width: 300px;
+        height: 380px;
+    }
+    header figure .middle h1 {
+        left: 37%;
+        font-size: 85px;
+    }
+
+    header figure main .hero_right .hero_right_title {
+        margin: 0px 28px 0 0;
+    }
+
+    header figure main .hero_right .hero_right_img {
+        width: 310px;
+        height: 310px;
+    }
+
+    header figure main .hero_right .hero_right_img .circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    header figure main .hero_right .hero_right_title h1 {
+        font-size: 75px;
+        width: 220px;
+        height: 95px;
+    }
+
+    header figure main .hero_right .hero_right_title img {
+        width: 294px;
+        height: 133px;
+    }
+
+    header figure main .hero_right .hero_right_img .circle .exprience {
+        width: 355px;
+        height: 112px;
+    }
+
+    header figure main .hero_right .hero_right_img .circle .exprience {
+        width: 335px;
+        height: 112px;
+        margin: 145% -35% 0%;
+    }
+
+    header figure main .hero_right .hero_right_img .circle .exprience .upps {
+        width: 145px;
+        height: 70px;
+    }
+
+    header figure main .hero_right .hero_right_img .circle .exprience .upps h4 {
+        font-size: 18px;
+    }
+
+    header figure main .hero_right .hero_right_img .circle .exprience .upps span {
+        font-size: 12px;
+    }
+
+    header .strp .strp_up a ul li {
+        font-size: 24px;
+        padding: 0 22px;
+    }
+
+    .gallery_section .gallery_left ul li a p {
+        font-size: 17px;
+    }
+
+    .gallery_section .gallery_right .gallery_img .img_content img {
+        width: 165px;
+        height: 300px;
+    }
+
+    .gallery_section .gallery_right .gallery_img .img_content p {
+        font-size: 14px;
+    }
+
+    .about_section .about_left .about_left_item h4 {
+        font-size: 27px;
+    }
+
+    .about_section .about_left .about_left_item p {
+        font-size: 16px;
+    }
+
+    .slider_section .slider_title > p {
+        font-size: 16px;
+    }
+
+    .slider_section .slider_title address .input_item button p {
+        font-size: 19px;
+    }
+
+    .slider_section .slider_title address .input_item button {
+        width: 135px;
+        height: 135px;
+    }
+
+    footer main .footer_nav ul li a {
+        font-size: 17px;
+    }
+
+    .slider_section .slider .slider_img img {
+        width: 200px;
+        height: 200px;
+    }
+
+    footer .footer_title h1 {
+        font-size: 55px;
+        padding-top: 20px;
+    }
+
+    footer .regestration p {
+        font-size: 12px;
+    }
+
+}    
+
+
+
+/* XL */
+@media (max-width:1199.98px) {
+
+    
+}
+
+/* LG */
+@media (max-width:991.98px) {
+    
+}
+
+/* MD */
+@media (max-width:767.98px) {
+    
+}
+
+/* SM */
+@media (max-width:575.98px) {
+    
+}
+
