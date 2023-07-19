@@ -2,43 +2,49 @@
 header {
   overflow: hidden;
 }
-header nav a {
-  margin: 0;
+header nav {
+  padding-top: 10px !important;
 }
-header nav a img {
-  width: 130px;
-  height: 20px;
+header nav a {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+header nav a h1 {
+  text-align: center;
+  font-family: "simplifydemo";
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0;
 }
 header nav .collapse .navbar-nav .nav-item {
   padding: 0 20px;
 }
 header nav .collapse .navbar-nav .nav-item .nav-link {
   position: relative;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   color: #666666;
   text-shadow: 0px 0px 10px #ffffff;
 }
 header nav .collapse button {
-  width: 130px;
-  height: 40px;
   border: 0 solid #dedede;
   border-radius: 15px;
+  padding: 18px 36px;
   background-color: #cf4e4e;
   color: #fff;
-  font-size: 16px;
+  font-size: 30px;
   font-weight: 500;
 }
-header .nav-pills .nav-link.active, header .nav-pills .show > .nav-link {
+header .nav-pills .nav-link.active,
+header .nav-pills .show > .nav-link {
   cursor: pointer;
   width: 100%;
   height: 100%;
   border: 0 solid #dedede;
   border-radius: 10px;
-  background: repeating-conic-gradient(from 28deg at 15% 30%, #9ee96d 0deg, #fefaeb 20deg 30deg);
-}
-header .nav-pills .nav-link.active:hover, header .nav-pills .show > .nav-link:hover {
-  background: repeating-conic-gradient(from 45deg at 15% 30%, #9ee96d 0deg, #fefaeb 20deg 30deg);
+  color: #cf4e4e !important;
+  background-color: transparent;
 }
 header .sticky {
   position: fixed;
@@ -55,36 +61,29 @@ header figure {
   position: relative;
   margin-bottom: 130px;
 }
-header figure .middle {
-  position: absolute;
-  top: 8%;
-  left: 15%;
-  width: 55%;
-  height: 75vh;
-  z-index: 2;
-}
 header figure .middle h1 {
   position: absolute;
-  top: 12%;
-  left: 35%;
+  top: 110px;
+  left: 42%;
   font-family: "simplifydemo";
-  font-size: 75px;
+  font-size: 96px;
   font-weight: 400;
   transform: translateX(-32%);
   text-align: center;
-  line-height: 1;
+  line-height: 1.4;
   letter-spacing: 5px;
 }
 header figure .middle h1 strong {
-  font-size: 80px;
+  font-size: 96px;
 }
 header figure .middle h1 span {
   position: absolute;
-  width: 600px;
-  left: 0;
+  width: 700px;
+  height: 100%;
+  left: 80px;
 }
 header figure .middle h1 span sub {
-  font-size: 75px;
+  font-size: 96px;
 }
 header figure .middle a {
   position: absolute;
@@ -93,8 +92,9 @@ header figure .middle a {
   align-items: center;
   width: 150px;
   height: 150px;
-  bottom: -1%;
+  top: 80%;
   left: 50%;
+  transform: translate(-50%, 20%);
   margin: 0;
   padding: 0;
   border: 0px solid #dedede;
@@ -114,10 +114,10 @@ header figure .middle a div p {
   top: 0;
   left: 50%;
   margin: 0;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   color: #666666;
-  transform-origin: 0 65px;
+  transform-origin: 0 80px;
   animation: swing 24s infinite linear;
 }
 @keyframes swing {
@@ -132,7 +132,7 @@ header figure .middle a img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -75%) rotate(5deg);
+  transform: translate(-50%, -50%) rotate(5deg);
   width: 40px;
 }
 header figure main {
@@ -145,7 +145,7 @@ header figure main .hero_left {
 }
 header figure main .hero_left > img {
   position: absolute;
-  width: 20px;
+  width: 25px;
   left: 0;
   top: 12%;
   right: inherit;
@@ -162,9 +162,9 @@ header figure main .hero_left > img {
 }
 header figure main .hero_left .hero_left_title {
   position: relative;
-  background-color: #9ee96d;
-  width: 80px;
-  height: 80px;
+  background-color: #222222;
+  width: 150px;
+  height: 150px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -174,13 +174,14 @@ header figure main .hero_left .hero_left_title {
 }
 header figure main .hero_left .hero_left_title .drow_line {
   position: absolute;
-  width: 132px;
-  left: 12%;
-  top: -16%;
-  transform: rotate(345deg);
+  width: 250px;
+  height: 390px;
+  left: -3px;
+  top: -10%;
+  transform: rotate(-4deg);
 }
 header figure main .hero_left .hero_left_title h1 {
-  font-size: 48px;
+  font-size: 100px;
   font-family: "simplifydemo";
   font-weight: 500;
   color: #fff;
@@ -189,17 +190,17 @@ header figure main .hero_left .hero_left_title h1 {
 }
 header figure main .hero_left .hero_left_img {
   position: relative;
-  width: 220px;
-  height: 220px;
+  width: 340px;
+  height: 340px;
   display: inline-block;
   border: 2px solid #dedede;
   border-radius: 100%;
-  margin: 40px 0 0 12px;
+  margin: 135px 0 0 0px;
 }
 header figure main .hero_left .hero_left_img .circle {
   position: absolute;
-  width: 210px;
-  height: 210px;
+  width: 311px;
+  height: 311px;
   left: 52%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -209,12 +210,12 @@ header figure main .hero_left .hero_left_img .circle {
 }
 header figure main .hero_left .hero_left_img .circle img {
   position: absolute;
-  width: 80%;
-  height: 115%;
+  width: 322px;
+  height: 406px;
   bottom: 0;
   left: 60%;
   transform: translateX(-50%);
-  border-radius: 10% 0% 75% 42%/0% 10% 37% 15%;
+  border-radius: 10% 0 100% 80%/0% 17% 63% 40%;
 }
 header figure main .hero_right {
   position: relative;
@@ -224,16 +225,17 @@ header figure main .hero_right {
 }
 header figure main .hero_right p {
   position: absolute;
-  top: 0;
+  top: 0%;
   right: 46%;
   transform: translateX(50%);
-  font-size: 13px;
+  color: #222222;
+  font-size: 16px;
   font-weight: 600;
   font-family: "Hepta Slab";
 }
 header figure main .hero_right > img {
   position: absolute;
-  width: 20px;
+  width: 25px;
   left: inherit;
   top: 100%;
   right: -10%;
@@ -256,38 +258,39 @@ header figure main .hero_right .hero_right_title h1 {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 165px;
-  height: 58px;
+  width: 270px;
+  height: 100px;
   background-color: #cf4e4e;
   border: 0px solid #dedede;
-  border-radius: 26px;
-  font-size: 45px;
+  border-radius: 50px;
+  font-size: 96px;
   font-family: "simplifydemo";
   font-weight: 500;
   color: #fff;
-  margin: 110px 0 0 10px;
+  margin: 190px 0 0 0px;
   padding-top: 5px;
   line-height: 0;
 }
 header figure main .hero_right .hero_right_title img {
   position: absolute;
-  left: 2%;
-  top: 42%;
-  width: 220px;
+  left: -3%;
+  top: 50%;
+  width: 358px;
+  height: 140px;
 }
 header figure main .hero_right .hero_right_img {
   position: relative;
-  width: 220px;
-  height: 220px;
+  width: 340px;
+  height: 340px;
   display: inline-block;
   border: 2px solid #dedede;
   border-radius: 100%;
-  margin: 40px 0 0;
+  margin: 50px 0 0;
 }
 header figure main .hero_right .hero_right_img .circle {
   position: absolute;
-  width: 210px;
-  height: 210px;
+  width: 311px;
+  height: 311px;
   left: 48%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -297,35 +300,35 @@ header figure main .hero_right .hero_right_img .circle {
 }
 header figure main .hero_right .hero_right_img .circle img {
   position: absolute;
-  width: 80%;
-  height: 100%;
+  width: 318px;
+  height: 337px;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   border: 0px solid #dedede;
-  border-radius: 0% 0% 68% 68%/90% 87% 53% 53%;
+  border-radius: 0% 0% 100% 70%/0 57% 50% 150%;
 }
 header figure main .hero_right .hero_right_img .circle .exprience {
   display: flex;
   justify-content: center;
-  width: 250px;
-  height: 80px;
+  width: 406px;
+  height: 117px;
   border: 2px solid #dedede;
-  border-radius: 33px;
+  border-radius: 140px;
   position: relative;
-  margin: 265px -140px 0px;
+  margin: 145% -52% 0%;
 }
 header figure main .hero_right .hero_right_img .circle .exprience .upps {
   position: absolute;
-  right: 8%;
+  right: 12%;
   top: 0%;
   transform: translateY(-50%);
-  background-color: #9ee96d;
+  background-color: #222222;
   color: #fff;
   border: 0px solid #dedede;
-  border-radius: 16px;
-  width: 130px;
-  height: 50px;
+  border-radius: 120px;
+  width: 165px;
+  height: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -333,15 +336,16 @@ header figure main .hero_right .hero_right_img .circle .exprience .upps {
 }
 header figure main .hero_right .hero_right_img .circle .exprience .upps h4 {
   margin: 0;
-  font-size: 15px;
+  font-size: 28px;
+  font-weight: 600;
 }
 header figure main .hero_right .hero_right_img .circle .exprience .upps span {
   margin: 0;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 600;
 }
 header figure main .hero_right .hero_right_img .circle .exprience .down {
-  left: 8%;
+  left: 12%;
   bottom: 0%;
   transform: translateY(50%);
   background-color: #afcfff;
@@ -359,7 +363,7 @@ header .strp .strp_up {
   position: absolute;
   left: 50%;
   width: 108%;
-  transform: translateX(-50%) rotateZ(5deg);
+  transform: translateX(-50%) rotateZ(4deg);
 }
 header .strp .strp_up a {
   text-decoration: none;
@@ -367,7 +371,7 @@ header .strp .strp_up a {
 header .strp .strp_up a ul {
   display: flex;
   flex-direction: row;
-  padding: 8px 0;
+  padding: 20px 0;
   margin: 0;
   justify-content: space-around;
   align-items: center;
@@ -375,15 +379,14 @@ header .strp .strp_up a ul {
 header .strp .strp_up a ul li {
   list-style: none;
   padding: 0 25px;
-  font-style: normal;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 30px;
   line-height: 150%;
   color: #fff;
 }
 header .strp .strp_down {
   background: #cf4e4e;
-  transform: translateX(-50%) rotateZ(-5deg);
+  transform: translateX(-50%) rotateZ(-4deg);
 }
 
 .gallery_section .gallery_title {
@@ -395,7 +398,7 @@ header .strp .strp_down {
 }
 .gallery_section .gallery_title > img {
   position: absolute;
-  width: 20px;
+  width: 25px;
   left: -5%;
   top: 100%;
   right: inherit;
@@ -413,14 +416,14 @@ header .strp .strp_down {
 .gallery_section .gallery_title h1 {
   text-align: start;
   font-family: "simplifydemo";
-  font-size: 48px;
+  font-size: 65px;
   font-weight: 500;
   line-height: 1;
-  width: 500px;
+  width: 780px;
 }
 .gallery_section .gallery_title button {
   background-color: transparent;
-  color: #9ee96d;
+  color: #cf4e4e;
   border: 0px solid #dedede;
   border-radius: 100%;
   display: flex;
@@ -429,11 +432,12 @@ header .strp .strp_down {
 }
 .gallery_section .gallery_title button p {
   margin: 0 15px 0 0;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
+  color: #222222;
 }
 .gallery_section .gallery_title button img {
-  width: 90px;
+  width: 100px;
 }
 .gallery_section .gallery_left ul {
   display: flex;
@@ -455,10 +459,10 @@ header .strp .strp_down {
   transition: color 0.2s linear;
 }
 .gallery_section .gallery_left ul li a p {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   margin: 0;
-  width: 210px;
+  width: 270px;
 }
 .gallery_section .gallery_left ul li a img {
   width: 0px;
@@ -493,25 +497,30 @@ header .strp .strp_down {
   justify-content: end;
 }
 .gallery_section .gallery_right .gallery_img .img_content {
-  text-align: end;
+  padding: 0 18px;
+  position: relative;
 }
 .gallery_section .gallery_right .gallery_img .img_content p {
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 600;
-}
-.gallery_section .gallery_right .gallery_img .img_content p:nth-child(even) {
+  position: absolute;
+  left: 50%;
+  width: 100%;
   margin: 16px 0 0;
 }
-.gallery_section .gallery_right .gallery_img .img_content img {
-  width: 80%;
-  filter: sepia(100%) saturate(400%) brightness(110%) hue-rotate(350deg);
+.gallery_section .gallery_right .gallery_img .img_content p:nth-child(odd) {
+  top: -15%;
 }
-.gallery_section .gallery_right .gallery_img .img_content:nth-child(even) {
+.gallery_section .gallery_right .gallery_img .img_content img {
+  width: 180px;
+  height: 320px;
+}
+.gallery_section .gallery_right .gallery_img .img_content:nth-child(odd) {
   margin-top: 70px;
 }
 
 .about_section {
-  margin-top: 90px;
+  margin-top: 100px;
 }
 .about_section .about_title {
   position: relative;
@@ -520,13 +529,13 @@ header .strp .strp_down {
 .about_section .about_title h1 {
   text-align: center;
   font-family: "simplifydemo";
-  font-size: 48px;
+  font-size: 65px;
   font-weight: 500;
   line-height: 1;
 }
 .about_section .about_title > img {
   position: absolute;
-  width: 20px;
+  width: 25px;
   left: inherit;
   top: 100%;
   right: -5%;
@@ -554,11 +563,11 @@ header .strp .strp_down {
 }
 .about_section .about_left .about_left_item h4 {
   color: #cf4e4e;
-  font-size: 23px;
+  font-size: 30px;
   font-weight: 600;
 }
 .about_section .about_left .about_left_item p {
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 500;
 }
 .about_section .about_center {
@@ -601,34 +610,12 @@ header .strp .strp_down {
 .exclusiveShot_section .exclusiveShot_title h1 {
   text-align: center;
   font-family: "simplifydemo";
-  font-size: 48px;
+  font-size: 65px;
   font-weight: 500;
   line-height: 1;
 }
 .exclusiveShot_section .exclusiveShot {
   position: relative;
-}
-.exclusiveShot_section .exclusiveShot a {
-  position: absolute;
-  display: flex;
-  color: #000;
-  text-decoration: none;
-  justify-content: center;
-  align-items: center;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  font-family: "simplifydemo";
-  padding-right: 5px;
-  width: 25px;
-  writing-mode: tb;
-  letter-spacing: 2px;
-  filter: contrast(2);
-  transition: transfrom 5s linear;
-}
-.exclusiveShot_section .exclusiveShot a:hover {
-  transform: translate(-50%, -50%) scale(1.05);
 }
 .exclusiveShot_section .exclusiveShot .exclusiveShot_item_1 {
   position: relative;
@@ -645,7 +632,7 @@ header .strp .strp_down {
 }
 .exclusiveShot_section .exclusiveShot .exclusiveShot_item_2 img {
   position: absolute;
-  width: 166px;
+  width: 100%;
 }
 .exclusiveShot_section .exclusiveShot .paralax {
   animation: paralax forwards 0.8s linear;
@@ -669,13 +656,13 @@ footer .footer_title {
 footer .footer_title h1 {
   text-align: center;
   font-family: "simplifydemo";
-  font-size: 48px;
+  font-size: 65px;
   font-weight: 500;
   line-height: 1.3;
 }
 footer .footer_title > img {
   position: absolute;
-  width: 20px;
+  width: 25px;
   left: inherit;
   top: 15%;
   right: 3%;
@@ -693,13 +680,19 @@ footer .footer_title > img {
 footer main {
   margin-bottom: 20px;
 }
-footer main img {
-  width: 110px;
+footer main h1 {
+  text-align: star;
+  font-family: "simplifydemo";
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1;
 }
 footer main .footer_nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
+  margin: 0;
 }
 footer main .footer_nav ul li {
   list-style: none;
@@ -707,9 +700,14 @@ footer main .footer_nav ul li {
 footer main .footer_nav ul li a {
   text-decoration: none;
   color: #666666;
-  font-size: 15px;
+  font-size: 21px;
   font-weight: 500;
   transition: color 0.3s linear;
+  display: block;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 0.5;
 }
 footer main .footer_nav ul li a:hover {
   color: #222222;
@@ -727,7 +725,7 @@ footer main .icon a i {
   padding-left: 20px;
   color: #000;
   border-radius: 100%;
-  font-size: 20px;
+  font-size: 26px;
   transition: transform 0.2s ease-in-out;
 }
 footer main .icon a i:hover {
@@ -742,7 +740,7 @@ footer .regestration {
   align-items: center;
 }
 footer .regestration p {
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
   color: #666666;
   letter-spacing: 0.5px;
@@ -760,7 +758,7 @@ footer .regestration p {
 }
 .slider_section .slider_title > img {
   position: absolute;
-  width: 20px;
+  width: 25px;
   left: 70px;
   top: -50px;
   right: inherit;
@@ -778,12 +776,12 @@ footer .regestration p {
 .slider_section .slider_title h1 {
   text-align: center;
   font-family: "simplifydemo";
-  font-size: 48px;
+  font-size: 65px;
   font-weight: 500;
   line-height: 1;
 }
 .slider_section .slider_title > p {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
   width: 375px;
   margin: 15px auto 15px;
@@ -800,8 +798,8 @@ footer .regestration p {
 .slider_section .slider_title address .input_item button {
   position: relative;
   overflow: hidden;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 100%;
   cursor: pointer;
   background-color: transparent;
@@ -813,8 +811,8 @@ footer .regestration p {
   position: absolute;
   top: -100%;
   left: -100%;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 100%;
   background-color: #cf4e4e;
   transition: all 0.5s linear;
@@ -825,19 +823,23 @@ footer .regestration p {
   border-radius: 100%;
   transform: rotate(360deg);
 }
+.slider_section .slider_title address .input_item button:hover img {
+  filter: sepia(200%) saturate(300%) brightness(380%) hue-rotate(-363deg);
+}
 .slider_section .slider_title address .input_item button img {
   position: absolute;
-  width: 25px;
+  width: 30px;
   left: 50%;
   top: 70%;
   transform: translate(-50%, -70%);
+  filter: sepia(0%) saturate(100%) brightness(80%) hue-rotate(-363deg);
 }
 .slider_section .slider_title address .input_item button p {
   position: absolute;
   left: 50%;
   top: 35%;
   transform: translate(-50%, -35%);
-  font-size: 15px;
+  font-size: 21px;
   font-weight: 500;
   margin: 0;
 }
@@ -846,7 +848,7 @@ footer .regestration p {
 }
 .slider_section .slider {
   width: 100%;
-  height: 50vh;
+  height: 41vh;
   position: relative;
   overflow: hidden;
   cursor: grab;
@@ -861,8 +863,9 @@ footer .regestration p {
   transform: translate(0%, -50%);
 }
 .slider_section .slider .slider_img img {
-  width: 200px;
-  height: 200px;
+  transform: rotate(275deg);
+  width: 250px;
+  height: 250px;
   -o-object-fit: none;
      object-fit: none;
   -o-object-position: center;
@@ -952,7 +955,7 @@ body form .form_input [type=submit]:focus {
 }
 body form .form_input > img {
   position: absolute;
-  width: 20px;
+  width: 25px;
   left: 10%;
   top: 80%;
   right: inherit;
@@ -969,7 +972,7 @@ body form .form_input > img {
 }
 body::-webkit-scrollbar {
   background-color: transparent;
-  width: 10px;
+  width: 20px;
 }
 body::-webkit-scrollbar:hover {
   box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2509803922);

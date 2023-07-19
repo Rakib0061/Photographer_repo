@@ -14,11 +14,11 @@
 
     h1 {
       @include title(start);
-      width: 500px;
+      width: 780px;
     }
     button {
       background-color: transparent;
-      color: $secendory_color;
+      color: $prime_color;
       @include border(0px);
       display: flex;
       justify-content: center;
@@ -26,12 +26,13 @@
 
       p {
         margin: 0 15px 0 0;
-        font-size: $p_font;
+        font-size: $h_font_sm;
         font-weight: $p_weight;
+        color: $dark_blk;
       }
 
       img {
-        width: 90px;
+        width: 100px;
       }
     }
   }
@@ -57,16 +58,16 @@
           transition: color 0.2s linear;
 
           p {
-            font-size: $p_font;
+            font-size: $h_font_sm;
             font-weight: $p_weight;
             margin: 0;
-            width: 210px;
+            width: 270px;
           }
 
           img {
             width: 0px;
             margin: 0 7px 0 0;
-            transition: width 0.2s cubic-bezier(.5,.23,.45,.27);
+            transition: width 0.2s cubic-bezier(0.5, 0.23, 0.45, 0.27);
           }
 
           &:hover {
@@ -105,23 +106,28 @@
       justify-content: end;
 
       .img_content {
-        text-align: end;
+        padding: 0 18px;
+        position: relative;
 
         p {
-          font-size: $cv_btn_font;
+          font-size: $nav_font;
           font-weight: $p_weight;
+          position: absolute;
+          left: 50%;
+          width: 100%;
+          margin: 16px 0 0;
 
-          &:nth-child(even) {
-            margin: 16px 0 0;
+          &:nth-child(odd) {
+            top: -15%;
           }
         }
 
         img {
-          width: 80%;
-          filter: sepia(100%) saturate(400%) brightness(110%) hue-rotate(350deg);
+          width: 180px;
+          height: 320px;
         }
 
-        &:nth-child(even) {
+        &:nth-child(odd) {
           margin-top: 70px;
         }
       }

@@ -17,22 +17,33 @@ footer {
     }
     main {
         margin-bottom: 20px;
-        img {
-            width: 110px;
+
+        h1 {
+            @include  title($f_siz:$h2_font_xl,$align:star);
+            
         }
         .footer_nav {
             ul {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                padding: 0;
+                margin: 0;
+
                 li {
                     list-style: none;
+
                     a {
                         text-decoration: none;
                         color: $light_blk;
-                        font-size: $p_font;
+                        font-size: $h2_font_lg;
                         font-weight: $title_weight;
                         transition: color 0.3s linear;
+                        display: block;
+                        width: 100px;
+                        height: 50px;
+                        text-align: center;
+                        line-height: 0.5;
 
                         &:hover {
                             color: $dark_blk;
@@ -54,7 +65,7 @@ footer {
                     padding-left: 20px;
                     color: #000;
                     border-radius: 100%;
-                    font-size: 20px;
+                    font-size: $h2_font_xl;
                     transition: transform 0.2s ease-in-out;
     
                     &:hover {

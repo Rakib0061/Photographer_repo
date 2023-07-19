@@ -2,7 +2,6 @@
 
 $prime_color: #cf4e4e;
 $mild_color: #afcfff;
-$secendory_color: #9ee96d;
 $body_bg: #fefaeb;
 $dark_blk: #222222;
 $light_blk: #666666;
@@ -10,9 +9,13 @@ $shadow_blk: #6666667d;
 $border: #dedede;
 $sticky_navbar_bg: #fefaeb99;
 $sticky_navbar_sadow: #c1c1c163;
-$conic-gradient : repeating-conic-gradient(from 28deg at 15% 30%, $secendory_color 0deg, $body_bg 20deg 30deg);
-$conic-gradient-hover : repeating-conic-gradient(from 45deg at 15% 30%, $secendory_color 0deg, $body_bg 20deg 30deg);
-$slider_bg : linear-gradient(to bottom, $body_bg 0% ,$body_bg 50%, $mild_color 50%, $mild_color 100%);
+$slider_bg: linear-gradient(
+  to bottom,
+  $body_bg 0%,
+  $body_bg 50%,
+  $mild_color 50%,
+  $mild_color 100%
+);
 
 // @@@@@@@@@@@@@@@@@@@@@@@@ color @@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -20,22 +23,26 @@ $slider_bg : linear-gradient(to bottom, $body_bg 0% ,$body_bg 50%, $mild_color 5
 
 $title_family: "simplifydemo";
 $prime_family: "Hepta Slab";
-$banner_font: 75px;
+$banner_font: 96px;
 $banner_weight: 400;
 $nav_font: 16px;
 $nav_weight: 500;
-$cv_btn_font: 10px;
+$cv_btn_font: 11px;
 $cv_btn_icon__font: 42px;
 $p_font: 15px;
 $p_font_sm: 13px;
-$h_font: 23px;
+$h_font: 28px;
 $h_font_xl: 30px;
 $h_font_sm: 18px;
-$stripe_font: 18px;
+$h2_font_xl: 26px;
+$h2_font_lg: 21px;
+$stripe_font: 30px;
 $p_weight: 600;
 $title_font: 48px;
+$title_font_m: 65px;
+$title_font_xl: 100px;
 $title_weight: 500;
-$copywrite_font : 10px;
+$copywrite_font: 14px;
 
 // @@@@@@@@@@@@@@@@@@@@@@@@ font @@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -50,7 +57,7 @@ $copywrite_font : 10px;
   box-shadow: 0px 0px 7px 1px $sdo;
 }
 
-@mixin title($align: center,$f_siz:$title_font,$l_height:1) {
+@mixin title($align: center, $f_siz: $title_font_m, $l_height: 1) {
   text-align: $align;
   font-family: $title_family;
   font-size: $f_siz;
@@ -65,7 +72,7 @@ $copywrite_font : 10px;
   $btom: inherit
 ) {
   position: absolute;
-  width: 20px;
+  width: 25px;
   left: $lft;
   top: $top;
   right: $rit;

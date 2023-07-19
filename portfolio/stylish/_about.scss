@@ -1,7 +1,7 @@
 @import "./variable";
 
 .about_section {
-  margin-top: 90px;
+  margin-top: 100px;
 
   .about_title {
     position: relative;
@@ -33,12 +33,12 @@
 
       h4 {
         color: $prime_color;
-        font-size: $h_font;
+        font-size: $h_font_xl;
         font-weight: $p_weight;
       }
 
       p {
-        font-size: $p_font_sm;
+        font-size: $h_font_sm;
         font-weight: $title_weight;
       }
     }

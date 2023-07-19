@@ -4,12 +4,15 @@ header {
   overflow: hidden;
 
   nav {
-    
+    padding-top: 10px !important;
+
     a {
-      margin: 0;
-      img {
-        width: 130px;
-        height: 20px;
+      margin: 0 !important;
+      padding: 0 !important;
+
+      h1 {
+        @include title($f_siz: $h_font_xl);
+        margin: 0;
       }
     }
     .collapse {
@@ -19,35 +22,32 @@ header {
 
           .nav-link {
             position: relative;
-            font-size: $nav_font;
-            font-weight: $nav_weight;
+            font-size: $h_font_sm;
+            font-weight: $p_weight;
             color: $light_blk;
             text-shadow: 0px 0px 10px #ffffff;
           }
         }
       }
       button {
-        width: 130px;
-        height: 40px;
         @include border($wd: 0, $radious: 15px);
+        padding: 18px 36px;
         background-color: $prime_color;
         color: #fff;
-        font-size: $nav_font;
+        font-size: $stripe_font;
         font-weight: $nav_weight;
       }
     }
   }
 
-  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
     cursor: pointer;
     width: 100%;
     height: 100%;
-    @include border($wd:0,$radious:10px);
-    background: $conic-gradient;
-
-    &:hover {
-      background: $conic-gradient-hover;
-    }
+    @include border($wd: 0, $radious: 10px);
+    color: $prime_color !important;
+    background-color: transparent;
   }
 
   .sticky {
@@ -66,33 +66,29 @@ header {
     margin-bottom: 130px;
 
     .middle {
-      position: absolute;
-      top: 8%;
-      left: 15%;
-      width: 55%;
-      height: 75vh;
-      z-index: 2;
 
       h1 {
         position: absolute;
-        top: 12%;
-        left: 35%;
+        top: 110px;
+        left: 42%;
         font-family: $title_family;
         font-size: $banner_font;
         font-weight: $banner_weight;
         transform: translateX(-32%);
         text-align: center;
-        line-height: 1;
+        line-height: 1.4;
         letter-spacing: 5px;
 
         strong {
-          font-size: 80px;
+          font-size: $banner_font;
         }
 
         span {
           position: absolute;
-          width: 600px;
-          left: 0;
+          width: 700px;
+          height: 100%;
+          left: 80px;
+
           sub {
             font-size: $banner_font;
           }
@@ -105,8 +101,9 @@ header {
         align-items: center;
         width: 150px;
         height: 150px;
-        bottom: -1%;
+        top: 80%;
         left: 50%;
+        transform: translate(-50% ,20%);
         margin: 0;
         padding: 0;
         @include border(0px);
@@ -127,7 +124,7 @@ header {
             font-size: $cv_btn_font;
             font-weight: $p_weight;
             color: $light_blk;
-            transform-origin: 0 65px;
+            transform-origin: 0 80px;
             animation: swing 24s infinite linear;
 
             @keyframes swing {
@@ -145,7 +142,7 @@ header {
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-50%, -75%) rotate(5deg);
+          transform: translate(-50%, -50%) rotate(5deg);
           width: 40px;
         }
       }
@@ -165,9 +162,9 @@ header {
 
         .hero_left_title {
           position: relative;
-          background-color: $secendory_color;
-          width: 80px;
-          height: 80px;
+          background-color: $dark_blk;
+          width: 150px;
+          height: 150px;
           display: inline-flex;
           justify-content: center;
           align-items: center;
@@ -176,14 +173,15 @@ header {
 
           .drow_line {
             position: absolute;
-            width: 132px;
-            left: 12%;
-            top: -16%;
-            transform: rotate(345deg);
+            width: 250px;
+            height: 390px;
+            left: -3px;
+            top: -10%;
+            transform: rotate(-4deg);
           }
 
           h1 {
-            font-size: $title_font;
+            font-size: $title_font_xl;
             font-family: $title_family;
             font-weight: $title_weight;
             color: #fff;
@@ -194,16 +192,16 @@ header {
 
         .hero_left_img {
           position: relative;
-          width: 220px;
-          height: 220px;
+          width: 340px;
+          height: 340px;
           display: inline-block;
           @include border();
-          margin: 40px 0 0 12px;
+          margin: 135px 0 0 0px;
 
           .circle {
             position: absolute;
-            width: 210px;
-            height: 210px;
+            width: 311px;
+            height: 311px;
             left: 52%;
             top: 50%;
             transform: translate(-50%, -50%);
@@ -212,12 +210,12 @@ header {
 
             img {
               position: absolute;
-              width: 80%;
-              height: 115%;
+              width: 322px;
+              height: 406px;
               bottom: 0;
               left: 60%;
               transform: translateX(-50%);
-              border-radius: 10% 0% 75% 42%/0% 10% 37% 15%;
+              border-radius: 10% 0 100% 80%/0% 17% 63% 40%;
             }
           }
         }
@@ -231,10 +229,11 @@ header {
 
         p {
           position: absolute;
-          top: 0;
+          top: 0%;
           right: 46%;
           transform: translateX(50%);
-          font-size: $p_font_sm;
+          color: $dark_blk;
+          font-size: $nav_font;
           font-weight: $p_weight;
           font-family: $prime_family;
         }
@@ -251,39 +250,40 @@ header {
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: 165px;
-            height: 58px;
+            width: 270px;
+            height: 100px;
             background-color: $prime_color;
-            @include border($wd: 0px, $radious: 26px);
-            font-size: 45px;
+            @include border($wd: 0px, $radious: 50px);
+            font-size: $banner_font;
             font-family: $title_family;
             font-weight: $title_weight;
             color: #fff;
-            margin: 110px 0 0 10px;
+            margin: 190px 0 0 0px;
             padding-top: 5px;
             line-height: 0;
           }
 
           img {
             position: absolute;
-            left: 2%;
-            top: 42%;
-            width: 220px;
+            left: -3%;
+            top: 50%;
+            width: 358px;
+            height: 140px;
           }
         }
 
         .hero_right_img {
           position: relative;
-          width: 220px;
-          height: 220px;
+          width: 340px;
+          height: 340px;
           display: inline-block;
           @include border();
-          margin: 40px 0 0;
+          margin: 50px 0 0;
 
           .circle {
             position: absolute;
-            width: 210px;
-            height: 210px;
+            width: 311px;
+            height:311px;
             left: 48%;
             top: 50%;
             transform: translate(-50%, -50%);
@@ -292,36 +292,36 @@ header {
 
             img {
               position: absolute;
-              width: 80%;
-              height: 100%;
+              width: 318px;
+              height: 337px;
               bottom: 0;
               left: 50%;
               transform: translateX(-50%);
               @include border(
                 $wd: 0px,
-                $radious: 0% 0% 68% 68% / 90% 87% 53% 53%
+                $radious: 0% 0% 100% 70%/0 57% 50% 150%
               );
             }
 
             .exprience {
               display: flex;
               justify-content: center;
-              width: 250px;
-              height: 80px;
-              @include border($radious: 33px);
+              width: 406px;
+              height: 117px;
+              @include border($radious: 140px);
               position: relative;
-              margin: 265px -140px 0px;
+              margin: 145% -52% 0%;
 
               .upps {
                 position: absolute;
-                right: 8%;
+                right: 12%;
                 top: 0%;
                 transform: translateY(-50%);
-                background-color: $secendory_color;
+                background-color: $dark_blk;
                 color: #fff;
-                @include border($wd: 0px, $radious: 16px);
-                width: 130px;
-                height: 50px;
+                @include border($wd: 0px, $radious: 120px);
+                width: 165px;
+                height: 75px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -329,16 +329,17 @@ header {
 
                 h4 {
                   margin: 0;
-                  font-size: $p_font;
+                  font-size: $h_font;
+                  font-weight: $p_weight;
                 }
                 span {
                   margin: 0;
-                  font-size: $cv_btn_font;
+                  font-size: $nav_font;
                   font-weight: $p_weight;
                 }
               }
               .down {
-                left: 8%;
+                left: 12%;
                 bottom: 0%;
                 transform: translateY(50%);
                 background-color: #afcfff;
@@ -363,7 +364,7 @@ header {
       position: absolute;
       left: 50%;
       width: 108%;
-      transform: translateX(-50%) rotateZ(5deg);
+      transform: translateX(-50%) rotateZ(4deg);
 
       a {
         text-decoration: none;
@@ -371,7 +372,7 @@ header {
         ul {
           display: flex;
           flex-direction: row;
-          padding: 8px 0;
+          padding: 20px 0;
           margin: 0;
           justify-content: space-around;
           align-items: center;
@@ -379,7 +380,6 @@ header {
           li {
             list-style: none;
             padding: 0 25px;
-            font-style: normal;
             font-weight: $p_weight;
             font-size: $stripe_font;
             line-height: 150%;
@@ -391,7 +391,7 @@ header {
 
     .strp_down {
       background: $prime_color;
-      transform: translateX(-50%) rotateZ(-5deg);
+      transform: translateX(-50%) rotateZ(-4deg);
     }
   }
 }

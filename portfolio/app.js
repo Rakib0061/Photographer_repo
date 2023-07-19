@@ -23,7 +23,7 @@ window.addEventListener("load", () => {
       vlu.innerHTML = text;
     });
 
-    // looping this animation 
+    // looping this animation
     if (incresing > 16) {
       cancelAnimationFrame(looping);
 
@@ -38,11 +38,11 @@ window.addEventListener("load", () => {
           fill: "forwards"
         }
       );
-        
+
       setTimeout(() => {
         preloader.style.display = "none";
       }, 1100);
-      
+
       return;
     }
 
@@ -51,7 +51,7 @@ window.addEventListener("load", () => {
 
   change_loop();
 
-  // make scroll bar top when i reload page 
+  // make scroll bar top when i reload page
 
   if(history.scrollRestoration){
     history.scrollRestoration = "manual"
@@ -85,8 +85,8 @@ cv_btn_p.innerHTML = cv_btn_p.innerText
   .map(
     (vlu, i) =>
       `<span style = "transform: rotate(${
-        i * 10
-      }deg);position: absolute;transform-origin: 0px 65px;">${vlu}</span>`
+        i * 9.9
+      }deg);position: absolute;transform-origin: 0px 80px;">${vlu}</span>`
   )
   .join("");
 
@@ -228,8 +228,8 @@ slider.addEventListener("mousemove", (e) => {
       vlu.animate(
         {
           // keyframs
-          objectPosition: `${-range_bar_vlu}% 50%`,
-          easing: "cubic-bezier(.37,.89,.37,.89)",
+          objectPosition: `50% ${-range_bar_vlu}%`,
+          easing: "cubic-bezier(1,1.01,0,-0.01)",
         },
         {
           //  timing option
@@ -243,3 +243,5 @@ slider.addEventListener("mousemove", (e) => {
 });
 
 //  @@@@@@@@@@@@@@@@@@@@@@@@@@@ custom Slider @@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
