@@ -19,6 +19,7 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "prettier.htmlSelfClosing": true,
   "editor.accessibilitySupport": "off",
   "liveServer.settings.donotShowInfoMsg": true,
   "javascript.updateImportsOnFileMove.enabled": "always",

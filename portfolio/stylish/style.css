@@ -17,6 +17,15 @@ header nav a h1 {
   line-height: 1;
   margin: 0;
 }
+header nav .navbar-toggler {
+  border: 0;
+  font-size: 22px;
+  padding: 0;
+}
+header nav .navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
 header nav .collapse .navbar-nav .nav-item {
   padding: 0 20px;
 }
@@ -71,7 +80,6 @@ header figure .middle h1 {
   transform: translateX(-32%);
   text-align: center;
   line-height: 1.4;
-  letter-spacing: 5px;
 }
 header figure .middle h1 strong {
   font-size: 96px;
@@ -141,7 +149,6 @@ header figure main {
 }
 header figure main .hero_left {
   position: relative;
-  margin: 0 250px 0 0;
 }
 header figure main .hero_left > img {
   position: absolute;

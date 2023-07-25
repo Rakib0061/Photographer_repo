@@ -7,18 +7,20 @@ let incresing = 0;
 let looping;
 
 window.addEventListener("load", () => {
-
   function change_loop() {
     // make random alphabet
     word_span.forEach((vlu) => {
-      let text = vlu.getAttribute("value").split("").map((vlu, indx) => {
+      let text = vlu
+        .getAttribute("value")
+        .split("")
+        .map((vlu, indx) => {
           if (indx < incresing) {
             return vlu;
-          }
-          else {
+          } else {
             return alphabat.charAt(Math.floor(Math.random() * alphabat.length));
           }
-        }).join("");
+        })
+        .join("");
       incresing += 1 / 150;
       vlu.innerHTML = text;
     });
@@ -35,7 +37,7 @@ window.addEventListener("load", () => {
         },
         {
           duration: 1000,
-          fill: "forwards"
+          fill: "forwards",
         }
       );
 
@@ -53,13 +55,11 @@ window.addEventListener("load", () => {
 
   // make scroll bar top when i reload page
 
-  if(history.scrollRestoration){
-    history.scrollRestoration = "manual"
+  if (history.scrollRestoration) {
+    history.scrollRestoration = "manual";
+  } else {
+    window.scrollTo(0, 0);
   }
-  else {
-    window.scrollTo(0,0)
-  }
-
 });
 
 //  @@@@@@@@@@@@@@@@@@@@@@@@@@@ Preloader @@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -243,5 +243,3 @@ slider.addEventListener("mousemove", (e) => {
 });
 
 //  @@@@@@@@@@@@@@@@@@@@@@@@@@@ custom Slider @@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-
